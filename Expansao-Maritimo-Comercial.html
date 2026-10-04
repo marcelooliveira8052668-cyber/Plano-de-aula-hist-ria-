@@ -1,0 +1,2655 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <!-- Define a codificação de caracteres da página. -->
+    <meta charset="UTF-8">
+
+    <!-- Faz o site se adaptar a celulares, tablets e computadores. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Define o título que aparece na aba do navegador. -->
+    <title>1.19 — Expansão Marítimo-Comercial Europeia | Curso de História Geral</title>
+
+    <style>
+
+        /* =========================================================
+           RESET GERAL
+           ========================================================= */
+
+        /* Remove margens e espaçamentos padrões do navegador. */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Define o comportamento da rolagem da página. */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Define a aparência geral do corpo da página. */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7fb;
+            color: #172033;
+            line-height: 1.75;
+        }
+
+        /* Remove sublinhado dos links. */
+        a {
+            text-decoration: none;
+        }
+
+        /* =========================================================
+           CABEÇALHO PRINCIPAL
+           ========================================================= */
+
+        /* Cria o cabeçalho visual do capítulo. */
+        header {
+            background:
+                linear-gradient(
+                    135deg,
+                    #071a3d 0%,
+                    #0b356d 45%,
+                    #087f8c 100%
+                );
+
+            color: white;
+            padding: 70px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Cria um efeito decorativo no cabeçalho. */
+        header::before {
+            content: "";
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 50%;
+            right: -100px;
+            top: -180px;
+        }
+
+        /* Cria outro elemento decorativo. */
+        header::after {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 50%;
+            left: -120px;
+            bottom: -180px;
+        }
+
+        /* Organiza o conteúdo do cabeçalho. */
+        .hero {
+            max-width: 1180px;
+            margin: auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Pequeno identificador do curso. */
+        .tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.13);
+            border: 1px solid rgba(255,255,255,0.25);
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            margin-bottom: 22px;
+        }
+
+        /* Título principal. */
+        .hero h1 {
+            font-size: clamp(2.2rem, 6vw, 4.8rem);
+            line-height: 1.05;
+            max-width: 950px;
+            margin-bottom: 25px;
+        }
+
+        /* Texto introdutório do cabeçalho. */
+        .hero p {
+            max-width: 850px;
+            font-size: 1.15rem;
+            color: #dcecff;
+        }
+
+        /* Destaque da frase final do cabeçalho. */
+        .hero strong {
+            color: #ffd166;
+        }
+
+        /* =========================================================
+           NAVEGAÇÃO
+           ========================================================= */
+
+        /* Cria a barra de navegação. */
+        .menu {
+            max-width: 1180px;
+            margin: -28px auto 40px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Área interna da navegação. */
+        .menu-box {
+            background: white;
+            border-radius: 18px;
+            padding: 16px;
+            box-shadow: 0 15px 45px rgba(7, 26, 61, 0.12);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        /* Estilo dos botões do menu. */
+        .menu a {
+            background: #edf4ff;
+            color: #0b356d;
+            padding: 10px 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        /* Efeito ao passar o mouse nos links. */
+        .menu a:hover {
+            background: #0b356d;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* =========================================================
+           CONTAINER
+           ========================================================= */
+
+        /* Limita a largura do conteúdo. */
+        main {
+            max-width: 1180px;
+            margin: auto;
+            padding: 0 20px 80px;
+        }
+
+        /* Cria espaçamento entre seções. */
+        section {
+            margin-bottom: 55px;
+            scroll-margin-top: 30px;
+        }
+
+        /* Títulos das seções. */
+        .section-title {
+            font-size: 2rem;
+            color: #0b356d;
+            margin-bottom: 20px;
+            border-left: 6px solid #f4a261;
+            padding-left: 15px;
+        }
+
+        /* Texto comum. */
+        p {
+            margin-bottom: 16px;
+        }
+
+        /* =========================================================
+           CARD DE ABERTURA
+           ========================================================= */
+
+        /* Card inicial do capítulo. */
+        .intro-card {
+            background: white;
+            border-radius: 22px;
+            padding: 35px;
+            box-shadow: 0 10px 35px rgba(20, 45, 80, 0.08);
+            border: 1px solid #e3eaf4;
+        }
+
+        /* Destaque do conceito central. */
+        .central {
+            background: linear-gradient(135deg, #fff7e8, #fff);
+            border-left: 6px solid #f4a261;
+            padding: 22px;
+            border-radius: 12px;
+            margin-top: 25px;
+        }
+
+        /* =========================================================
+           TRÊS PARTES DA PERIODIZAÇÃO
+           ========================================================= */
+
+        /* Grade das três grandes partes. */
+        .periodizacao {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        /* Card de cada parte. */
+        .periodo {
+            padding: 28px;
+            border-radius: 18px;
+            color: white;
+            min-height: 240px;
+        }
+
+        /* Primeira parte. */
+        .periodo.um {
+            background: linear-gradient(135deg, #0b356d, #1769aa);
+        }
+
+        /* Segunda parte. */
+        .periodo.dois {
+            background: linear-gradient(135deg, #087f8c, #0aa6a6);
+        }
+
+        /* Terceira parte. */
+        .periodo.tres {
+            background: linear-gradient(135deg, #a64b19, #d9772b);
+        }
+
+        /* Número das partes. */
+        .periodo .numero {
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: 0.8;
+        }
+
+        /* Título das partes. */
+        .periodo h3 {
+            font-size: 1.45rem;
+            margin: 12px 0;
+        }
+
+        /* =========================================================
+           GRID DE CONTEÚDO
+           ========================================================= */
+
+        /* Cria duas colunas de conteúdo. */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        /* Card padrão. */
+        .card {
+            background: white;
+            border-radius: 18px;
+            padding: 28px;
+            border: 1px solid #e1e8f0;
+            box-shadow: 0 8px 25px rgba(20, 45, 80, 0.06);
+        }
+
+        /* Título dos cards. */
+        .card h3 {
+            color: #0b356d;
+            margin-bottom: 14px;
+        }
+
+        /* Lista dos cards. */
+        .card ul {
+            padding-left: 22px;
+        }
+
+        /* Espaçamento dos itens. */
+        .card li {
+            margin-bottom: 8px;
+        }
+
+        /* =========================================================
+           CONCEITO-CHAVE
+           ========================================================= */
+
+        /* Caixa especial para conceitos. */
+        .conceito {
+            background: #eaf9fa;
+            border: 1px solid #bce8ea;
+            border-radius: 18px;
+            padding: 28px;
+            margin: 22px 0;
+        }
+
+        /* Nome do conceito. */
+        .conceito strong {
+            color: #087f8c;
+        }
+
+        /* =========================================================
+           LINHA DO TEMPO
+           ========================================================= */
+
+        /* Área da linha do tempo. */
+        .timeline {
+            position: relative;
+            margin: 35px 0;
+            padding-left: 35px;
+        }
+
+        /* Linha vertical. */
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 8px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: #f4a261;
+        }
+
+        /* Cada acontecimento. */
+        .evento {
+            position: relative;
+            margin-bottom: 30px;
+            background: white;
+            border-radius: 15px;
+            padding: 22px;
+            box-shadow: 0 7px 20px rgba(20,45,80,0.06);
+        }
+
+        /* Ponto da linha do tempo. */
+        .evento::before {
+            content: "";
+            position: absolute;
+            left: -36px;
+            top: 25px;
+            width: 15px;
+            height: 15px;
+            background: #f4a261;
+            border-radius: 50%;
+            border: 4px solid #f4f7fb;
+        }
+
+        /* Data do acontecimento. */
+        .evento .data {
+            color: #a64b19;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        /* =========================================================
+           TABELA
+           ========================================================= */
+
+        /* Permite rolagem horizontal em telas pequenas. */
+        .table-wrapper {
+            overflow-x: auto;
+            margin-top: 25px;
+        }
+
+        /* Tabela principal. */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        /* Células da tabela. */
+        th,
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #e5ebf2;
+            text-align: left;
+        }
+
+        /* Cabeçalho da tabela. */
+        th {
+            background: #0b356d;
+            color: white;
+        }
+
+        /* =========================================================
+           ROTAS
+           ========================================================= */
+
+        /* Cards de Portugal e Espanha. */
+        .rotas {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+        }
+
+        /* Card português. */
+        .rota-portugal {
+            border-top: 6px solid #087f8c;
+        }
+
+        /* Card espanhol. */
+        .rota-espanha {
+            border-top: 6px solid #f4a261;
+        }
+
+        /* =========================================================
+           CAIXAS DE PROFESSOR
+           ========================================================= */
+
+        /* Caixa para orientação docente. */
+        .professor {
+            background: linear-gradient(135deg, #101c36, #172b52);
+            color: white;
+            border-radius: 20px;
+            padding: 32px;
+        }
+
+        /* Título da caixa docente. */
+        .professor h3 {
+            color: #ffd166;
+            margin-bottom: 15px;
+        }
+
+        /* Lista da caixa docente. */
+        .professor ul {
+            padding-left: 22px;
+        }
+
+        /* =========================================================
+           LOUSA
+           ========================================================= */
+
+        /* Simula uma lousa digital. */
+        .lousa {
+            background: #172033;
+            color: #f4f7fb;
+            border-radius: 18px;
+            padding: 30px;
+            box-shadow: inset 0 0 0 5px #27344d;
+        }
+
+        /* Título da lousa. */
+        .lousa h3 {
+            color: #ffd166;
+        }
+
+        /* =========================================================
+           CAUSAS E CONSEQUÊNCIAS
+           ========================================================= */
+
+        /* Grade de causas e consequências. */
+        .causa-consequencia {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+        }
+
+        /* Card de causa. */
+        .causa {
+            border-top: 6px solid #0b356d;
+        }
+
+        /* Card de consequência. */
+        .consequencia {
+            border-top: 6px solid #d9772b;
+        }
+
+        /* =========================================================
+           BNCC
+           ========================================================= */
+
+        /* Card especial da BNCC. */
+        .bncc {
+            background: linear-gradient(135deg, #f0f7ff, #ffffff);
+            border: 2px solid #c9dff7;
+            border-radius: 20px;
+            padding: 32px;
+        }
+
+        /* Código da BNCC. */
+        .codigo-bncc {
+            display: inline-block;
+            background: #0b356d;
+            color: white;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        /* =========================================================
+           QUESTÕES
+           ========================================================= */
+
+        /* Grade das questões. */
+        .questoes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+        }
+
+        /* Card da questão. */
+        .questao {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid #e0e7ef;
+            box-shadow: 0 8px 25px rgba(20,45,80,0.06);
+        }
+
+        /* Número da questão. */
+        .numero-questao {
+            display: inline-block;
+            background: #f4a261;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* Alternativas. */
+        .alternativas {
+            margin: 20px 0;
+        }
+
+        /* Cada alternativa. */
+        .alternativas div {
+            background: #f5f8fc;
+            padding: 10px 13px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+
+        /* Botão do gabarito. */
+        button {
+            border: none;
+            background: #0b356d;
+            color: white;
+            padding: 11px 18px;
+            border-radius: 9px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        /* Efeito do botão. */
+        button:hover {
+            background: #087f8c;
+            transform: translateY(-2px);
+        }
+
+        /* Resposta escondida. */
+        .resposta {
+            display: none;
+            margin-top: 15px;
+            padding: 16px;
+            background: #eaf9fa;
+            border-left: 4px solid #087f8c;
+            border-radius: 8px;
+        }
+
+        /* =========================================================
+           RODAPÉ
+           ========================================================= */
+
+        /* Rodapé da página. */
+        footer {
+            background: #071a3d;
+            color: #dcecff;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        /* Nome do professor no rodapé. */
+        footer strong {
+            color: #ffd166;
+        }
+
+        /* =========================================================
+           BOTÃO VOLTAR AO TOPO
+           ========================================================= */
+
+        /* Botão fixo. */
+        #topo {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #f4a261;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            z-index: 100;
+        }
+
+        /* =========================================================
+           RESPONSIVIDADE
+           ========================================================= */
+
+        /* Ajustes para tablets. */
+        @media (max-width: 850px) {
+
+            .periodizacao,
+            .grid,
+            .rotas,
+            .causa-consequencia,
+            .questoes {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 2.6rem;
+            }
+
+        }
+
+        /* Ajustes para celulares. */
+        @media (max-width: 600px) {
+
+            header {
+                padding: 50px 18px;
+            }
+
+            main {
+                padding: 0 15px 60px;
+            }
+
+            .menu {
+                padding: 0 10px;
+            }
+
+            .intro-card,
+            .card,
+            .professor,
+            .bncc,
+            .questao,
+            .lousa {
+                padding: 22px;
+            }
+
+            .section-title {
+                font-size: 1.55rem;
+            }
+
+            .hero h1 {
+                font-size: 2.1rem;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body id="inicio">
+
+    <!-- =========================================================
+         CABEÇALHO
+         ========================================================= -->
+
+    <header>
+
+        <div class="hero">
+
+            <span class="tag">
+                CURSO DE HISTÓRIA GERAL • CAPÍTULO 1.19
+            </span>
+
+            <h1>
+                A Expansão Marítimo-Comercial Europeia
+            </h1>
+
+            <p>
+                Das transformações da Europa no final da Idade Média
+                à formação de novas conexões entre <strong>Europa, África,
+                Ásia e América</strong>.
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================================
+         MENU
+         ========================================================= -->
+
+    <nav class="menu">
+
+        <div class="menu-box">
+
+            <a href="#inicio">Início</a>
+
+            <a href="#comeco">O Começo</a>
+
+            <a href="#desenvolvimento">Desenvolvimento</a>
+
+            <a href="#rotas">Rotas</a>
+
+            <a href="#consequencias">Consequências</a>
+
+            <a href="#legado">Legado</a>
+
+            <a href="#professor">Professor</a>
+
+            <a href="#bncc">BNCC</a>
+
+            <a href="#questoes">Questões</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================================================
+         CONTEÚDO PRINCIPAL
+         ========================================================= -->
+
+    <main>
+
+
+        <!-- =====================================================
+             INTRODUÇÃO
+             ===================================================== -->
+
+        <section>
+
+            <div class="intro-card">
+
+                <h2 class="section-title">
+                    Antes de falar em "Grandes Navegações"
+                </h2>
+
+                <p>
+                    A expansão marítimo-comercial europeia não surgiu
+                    repentinamente. Ela foi resultado de transformações
+                    econômicas, políticas, sociais, culturais e técnicas
+                    que ocorreram principalmente entre os séculos XIV e XVI.
+                </p>
+
+                <p>
+                    O processo envolveu a busca por novas rotas comerciais,
+                    o interesse por produtos orientais, a expansão das
+                    monarquias, a atuação de comerciantes, o desenvolvimento
+                    de conhecimentos náuticos e a disputa pelo controle
+                    de rotas e territórios.
+                </p>
+
+                <div class="central">
+
+                    <strong>CONCEITO CENTRAL:</strong>
+
+                    <p>
+                        A expansão marítimo-comercial europeia foi um processo
+                        histórico de ampliação das rotas marítimas e das
+                        relações de comércio e poder, especialmente a partir
+                        dos séculos XV e XVI, que conectou sociedades de
+                        diferentes regiões do mundo em uma escala cada vez
+                        maior.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PERIODIZAÇÃO
+             ===================================================== -->
+
+        <section>
+
+            <h2 class="section-title">
+                A trilogia da periodização
+            </h2>
+
+            <div class="periodizacao">
+
+                <div class="periodo um">
+
+                    <span class="numero">
+                        Parte I
+                    </span>
+
+                    <h3>
+                        O Começo
+                    </h3>
+
+                    <p>
+                        Crise do século XIV, recuperação econômica,
+                        crescimento comercial, fortalecimento das
+                        monarquias e busca por novas rotas.
+                    </p>
+
+                </div>
+
+
+                <div class="periodo dois">
+
+                    <span class="numero">
+                        Parte II
+                    </span>
+
+                    <h3>
+                        O Desenvolvimento
+                    </h3>
+
+                    <p>
+                        Portugal e Espanha, novas técnicas de navegação,
+                        rotas africanas, chegada europeia à América,
+                        comércio e conquista.
+                    </p>
+
+                </div>
+
+
+                <div class="periodo tres">
+
+                    <span class="numero">
+                        Parte III
+                    </span>
+
+                    <h3>
+                        O Legado
+                    </h3>
+
+                    <p>
+                        Formação do mundo atlântico, colonialismo,
+                        circulação de mercadorias, pessoas e culturas,
+                        escravização e novas relações de poder.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             O COMEÇO
+             ===================================================== -->
+
+        <section id="comeco">
+
+            <h2 class="section-title">
+                I — O COMEÇO: por que os europeus navegaram?
+            </h2>
+
+            <div class="grid">
+
+                <div class="card">
+
+                    <h3>
+                        1. A recuperação europeia
+                    </h3>
+
+                    <p>
+                        Depois das crises do século XIV, algumas regiões
+                        europeias passaram por recuperação demográfica e
+                        econômica. O comércio e as cidades voltaram a ganhar
+                        importância.
+                    </p>
+
+                    <p>
+                        Mercadores passaram a buscar novas oportunidades
+                        de circulação de produtos e capitais.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        2. O comércio com o Oriente
+                    </h3>
+
+                    <p>
+                        Produtos como especiarias, seda e outros artigos
+                        orientais tinham grande valor nos mercados europeus.
+                    </p>
+
+                    <p>
+                        Parte desse comércio era realizada por diferentes
+                        intermediários e redes comerciais que conectavam
+                        o Mediterrâneo ao Oriente.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        3. Busca por novas rotas
+                    </h3>
+
+                    <p>
+                        Comerciantes e monarquias europeias tinham interesse
+                        em ampliar o acesso aos mercados africanos e asiáticos.
+                    </p>
+
+                    <p>
+                        A navegação pelo Atlântico tornou-se uma possibilidade
+                        estratégica.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        4. Fortalecimento das monarquias
+                    </h3>
+
+                    <p>
+                        O fortalecimento político de monarquias como Portugal
+                        e Espanha permitiu maior concentração de recursos
+                        para projetos de expansão.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="conceito">
+
+                <strong>
+                    ATENÇÃO AO ALUNO:
+                </strong>
+
+                <p>
+                    Não existe uma única causa para as Grandes Navegações.
+                    É mais adequado falar em um conjunto de fatores
+                    econômicos, políticos, religiosos, sociais, técnicos
+                    e estratégicos.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CAUSAS
+             ===================================================== -->
+
+        <section>
+
+            <h2 class="section-title">
+                As principais causas
+            </h2>
+
+            <div class="causa-consequencia">
+
+                <div class="card causa">
+
+                    <h3>
+                        Fatores econômicos
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            Busca por especiarias e produtos orientais.
+                        </li>
+
+                        <li>
+                            Interesse em ampliar mercados.
+                        </li>
+
+                        <li>
+                            Busca por metais preciosos.
+                        </li>
+
+                        <li>
+                            Expansão das atividades comerciais.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="card causa">
+
+                    <h3>
+                        Fatores políticos
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            Fortalecimento das monarquias.
+                        </li>
+
+                        <li>
+                            Competição entre Estados.
+                        </li>
+
+                        <li>
+                            Controle de rotas comerciais.
+                        </li>
+
+                        <li>
+                            Expansão territorial e política.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="card causa">
+
+                    <h3>
+                        Fatores religiosos
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            Expansão do cristianismo.
+                        </li>
+
+                        <li>
+                            Continuidade de conflitos religiosos.
+                        </li>
+
+                        <li>
+                            Projeto de expansão da influência cristã.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="card causa">
+
+                    <h3>
+                        Fatores técnicos e culturais
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            Aperfeiçoamento da cartografia.
+                        </li>
+
+                        <li>
+                            Uso de instrumentos de orientação.
+                        </li>
+
+                        <li>
+                            Aperfeiçoamento das embarcações.
+                        </li>
+
+                        <li>
+                            Acúmulo de conhecimentos náuticos.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             DESENVOLVIMENTO
+             ===================================================== -->
+
+        <section id="desenvolvimento">
+
+            <h2 class="section-title">
+                II — O DESENVOLVIMENTO
+            </h2>
+
+            <div class="card">
+
+                <h3>
+                    Por que Portugal saiu na frente?
+                </h3>
+
+                <p>
+                    Portugal possuía uma posição geográfica voltada para
+                    o Atlântico e uma experiência crescente com a navegação
+                    ao longo da costa africana.
+                </p>
+
+                <p>
+                    A centralização política e os interesses comerciais
+                    também contribuíram para que a monarquia portuguesa
+                    apoiasse projetos de expansão.
+                </p>
+
+                <p>
+                    A conquista de Ceuta, em 1415, é tradicionalmente
+                    considerada um marco importante desse processo.
+                </p>
+
+            </div>
+
+
+            <div class="grid">
+
+                <div class="card">
+
+                    <h3>
+                        Navegação pela costa africana
+                    </h3>
+
+                    <p>
+                        Os portugueses avançaram progressivamente pela
+                        costa ocidental africana.
+                    </p>
+
+                    <p>
+                        O processo envolveu comércio, estabelecimento
+                        de feitorias, alianças, conflitos e exploração
+                        de diferentes regiões.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        O Cabo da Boa Esperança
+                    </h3>
+
+                    <p>
+                        Em 1488, Bartolomeu Dias alcançou o extremo sul
+                        da África, demonstrando a possibilidade de
+                        contornar o continente.
+                    </p>
+
+                    <p>
+                        O local ficou conhecido como Cabo da Boa Esperança.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        Vasco da Gama
+                    </h3>
+
+                    <p>
+                        Em 1498, a expedição comandada por Vasco da Gama
+                        chegou a Calecute, na costa ocidental da Índia,
+                        conectando Portugal diretamente a uma rota marítima
+                        para o comércio do oceano Índico.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        A viagem de Colombo
+                    </h3>
+
+                    <p>
+                        Em 1492, Cristóvão Colombo, apoiado pela monarquia
+                        espanhola, atravessou o Atlântico e chegou ao Caribe.
+                    </p>
+
+                    <p>
+                        Colombo acreditava ter alcançado regiões da Ásia,
+                        mas suas viagens abriram caminho para o processo
+                        de conquista e colonização europeia das Américas.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CRONOLOGIA
+             ===================================================== -->
+
+        <section>
+
+            <h2 class="section-title">
+                Linha do tempo essencial
+            </h2>
+
+            <div class="timeline">
+
+                <div class="evento">
+
+                    <div class="data">
+                        1415
+                    </div>
+
+                    <h3>
+                        Conquista portuguesa de Ceuta
+                    </h3>
+
+                    <p>
+                        Marco tradicional do início da expansão portuguesa
+                        ultramarina.
+                    </p>
+
+                </div>
+
+
+                <div class="evento">
+
+                    <div class="data">
+                        1488
+                    </div>
+
+                    <h3>
+                        Bartolomeu Dias
+                    </h3>
+
+                    <p>
+                        Contorna o extremo sul da África.
+                    </p>
+
+                </div>
+
+
+                <div class="evento">
+
+                    <div class="data">
+                        1492
+                    </div>
+
+                    <h3>
+                        Colombo chega ao Caribe
+                    </h3>
+
+                    <p>
+                        A expedição espanhola alcança a América,
+                        embora Colombo pensasse ter chegado à Ásia.
+                    </p>
+
+                </div>
+
+
+                <div class="evento">
+
+                    <div class="data">
+                        1494
+                    </div>
+
+                    <h3>
+                        Tratado de Tordesilhas
+                    </h3>
+
+                    <p>
+                        Portugal e Espanha estabelecem uma divisão
+                        de áreas de exploração por meio de um meridiano.
+                    </p>
+
+                </div>
+
+
+                <div class="evento">
+
+                    <div class="data">
+                        1498
+                    </div>
+
+                    <h3>
+                        Vasco da Gama chega à Índia
+                    </h3>
+
+                    <p>
+                        A rota marítima portuguesa até o oceano Índico
+                        é consolidada.
+                    </p>
+
+                </div>
+
+
+                <div class="evento">
+
+                    <div class="data">
+                        1500
+                    </div>
+
+                    <h3>
+                        Expedição de Pedro Álvares Cabral
+                    </h3>
+
+                    <p>
+                        A frota portuguesa chega ao território que
+                        posteriormente seria chamado Brasil.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             TÉCNICAS DE NAVEGAÇÃO
+             ===================================================== -->
+
+        <section>
+
+            <h2 class="section-title">
+                Tecnologia, conhecimento e navegação
+            </h2>
+
+            <div class="grid">
+
+                <div class="card">
+
+                    <h3>
+                        Caravela
+                    </h3>
+
+                    <p>
+                        Embarcação importante nas navegações portuguesas,
+                        especialmente por sua capacidade de navegar com
+                        relativa eficiência em diferentes condições.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        Bússola
+                    </h3>
+
+                    <p>
+                        Instrumento de orientação baseado na indicação
+                        das direções magnéticas.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        Astrolábio
+                    </h3>
+
+                    <p>
+                        Instrumento utilizado para observações astronômicas
+                        e para auxiliar na determinação da posição.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        Cartografia
+                    </h3>
+
+                    <p>
+                        Mapas e conhecimentos geográficos foram sendo
+                        aperfeiçoados e adaptados conforme novas informações
+                        eram incorporadas.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="conceito">
+
+                <strong>
+                    PONTO IMPORTANTE:
+                </strong>
+
+                <p>
+                    Nenhum desses instrumentos foi simplesmente "inventado"
+                    pelos europeus naquele momento. Muitos conhecimentos
+                    náuticos, matemáticos, astronômicos e cartográficos
+                    possuíam histórias anteriores e circulavam entre
+                    diferentes sociedades.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PORTUGAL E ESPANHA
+             ===================================================== -->
+
+        <section id="rotas">
+
+            <h2 class="section-title">
+                Portugal e Espanha: caminhos diferentes
+            </h2>
+
+            <div class="rotas">
+
+                <div class="card rota-portugal">
+
+                    <h3>
+                        🇵🇹 Portugal
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            Exploração progressiva da costa africana.
+                        </li>
+
+                        <li>
+                            Busca de uma rota marítima para a Ásia.
+                        </li>
+
+                        <li>
+                            Passagem pelo Cabo da Boa Esperança.
+                        </li>
+
+                        <li>
+                            Chegada à Índia em 1498.
+                        </li>
+
+                        <li>
+                            Formação de uma rede comercial no oceano Índico.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="card rota-espanha">
+
+                    <h3>
+                        🇪🇸 Espanha
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            Apoio à expedição de Cristóvão Colombo.
+                        </li>
+
+                        <li>
+                            Travessia do Atlântico em direção ao oeste.
+                        </li>
+
+                        <li>
+                            Chegada ao Caribe em 1492.
+                        </li>
+
+                        <li>
+                            Posterior conquista de grandes territórios americanos.
+                        </li>
+
+                        <li>
+                            Formação de um amplo império colonial americano.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             TRATADO DE TORDESILHAS
+             ===================================================== -->
+
+        <section>
+
+            <h2 class="section-title">
+                O Tratado de Tordesilhas
+            </h2>
+
+            <div class="card">
+
+                <p>
+                    O Tratado de Tordesilhas, firmado em 1494 entre
+                    Portugal e Espanha, estabeleceu uma linha de
+                    demarcação para as áreas de expansão das duas
+                    monarquias.
+                </p>
+
+                <p>
+                    O acordo deve ser entendido dentro da lógica política
+                    e diplomática das monarquias ibéricas e da disputa
+                    pelo controle das novas rotas e territórios.
+                </p>
+
+                <div class="conceito">
+
+                    <strong>
+                        PARA O ENEM:
+                    </strong>
+
+                    <p>
+                        Não trate Tordesilhas como uma simples divisão
+                        "do mundo inteiro" entre Portugal e Espanha.
+                        O tratado expressava interesses específicos
+                        dessas monarquias e fazia parte de uma disputa
+                        pelo controle da expansão ultramarina.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CONSEQUÊNCIAS
+             ===================================================== -->
+
+        <section id="consequencias">
+
+            <h2 class="section-title">
+                As consequências da expansão
+            </h2>
+
+            <div class="causa-consequencia">
+
+                <div class="card consequencia">
+
+                    <h3>
+                        Novas conexões comerciais
+                    </h3>
+
+                    <p>
+                        Diferentes regiões passaram a estar conectadas
+                        por redes marítimas cada vez mais amplas.
+                    </p>
+
+                </div>
+
+
+                <div class="card consequencia">
+
+                    <h3>
+                        Expansão colonial
+                    </h3>
+
+                    <p>
+                        Portugal e Espanha estabeleceram domínios,
+                        feitorias e estruturas coloniais em diferentes
+                        regiões.
+                    </p>
+
+                </div>
+
+
+                <div class="card consequencia">
+
+                    <h3>
+                        Conquista e violência
+                    </h3>
+
+                    <p>
+                        A expansão europeia envolveu guerras,
+                        conquista territorial, exploração econômica
+                        e diferentes formas de violência contra
+                        populações locais.
+                    </p>
+
+                </div>
+
+
+                <div class="card consequencia">
+
+                    <h3>
+                        Escravização de africanos
+                    </h3>
+
+                    <p>
+                        A expansão portuguesa e posteriormente outras
+                        potências europeias participaram da ampliação
+                        do tráfico atlântico de africanos escravizados.
+                    </p>
+
+                </div>
+
+
+                <div class="card consequencia">
+
+                    <h3>
+                        Transformações demográficas
+                    </h3>
+
+                    <p>
+                        Doenças, guerras, escravização e deslocamentos
+                        populacionais produziram enormes transformações
+                        nas sociedades envolvidas.
+                    </p>
+
+                </div>
+
+
+                <div class="card consequencia">
+
+                    <h3>
+                        Trocas biológicas e culturais
+                    </h3>
+
+                    <p>
+                        Plantas, animais, alimentos, doenças, conhecimentos
+                        e práticas culturais passaram a circular entre
+                        diferentes continentes.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             AMÉRICA E BRASIL
+             ===================================================== -->
+
+        <section>
+
+            <h2 class="section-title">
+                A expansão e a história do Brasil
+            </h2>
+
+            <div class="card">
+
+                <p>
+                    A história do Brasil está diretamente relacionada
+                    à expansão marítimo-comercial portuguesa.
+                </p>
+
+                <p>
+                    A chegada da frota de Pedro Álvares Cabral, em 1500,
+                    ocorreu dentro de uma conjuntura de expansão portuguesa
+                    pelo Atlântico e de busca por rotas comerciais.
+                </p>
+
+                <p>
+                    A partir daí iniciou-se um longo processo de contato,
+                    conflitos, alianças, exploração econômica e transformação
+                    das sociedades indígenas, que posteriormente seria
+                    acompanhado pela colonização portuguesa.
+                </p>
+
+            </div>
+
+
+            <div class="grid">
+
+                <div class="card">
+
+                    <h3>
+                        Povos indígenas
+                    </h3>
+
+                    <p>
+                        Os territórios americanos não estavam vazios.
+                        Eram ocupados por sociedades diversas, com
+                        diferentes línguas, culturas, organizações
+                        políticas e formas de relação com o ambiente.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        África
+                    </h3>
+
+                    <p>
+                        As sociedades africanas participaram ativamente
+                        das redes comerciais do período. A África não deve
+                        ser apresentada como simples cenário passivo da
+                        expansão europeia.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             MUNDO ATLÂNTICO
+             ===================================================== -->
+
+        <section>
+
+            <h2 class="section-title">
+                O nascimento de um mundo atlântico
+            </h2>
+
+            <div class="card">
+
+                <p>
+                    A expansão marítima alterou profundamente a importância
+                    do oceano Atlântico nas relações econômicas e políticas
+                    internacionais.
+                </p>
+
+                <p>
+                    Rotas ligando Europa, África e América contribuíram
+                    para a formação de redes comerciais que posteriormente
+                    seriam fundamentais para o desenvolvimento do sistema
+                    colonial e do tráfico atlântico de africanos escravizados.
+                </p>
+
+                <p>
+                    Por isso, estudar as Grandes Navegações não significa
+                    apenas estudar viagens de navegadores. Significa
+                    compreender a formação de novas relações globais
+                    de poder, comércio e circulação.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             III — LEGADO
+             ===================================================== -->
+
+        <section id="legado">
+
+            <h2 class="section-title">
+                III — O LEGADO E O MUNDO ATUAL
+            </h2>
+
+            <div class="grid">
+
+                <div class="card">
+
+                    <h3>
+                        Globalização histórica
+                    </h3>
+
+                    <p>
+                        As conexões estabelecidas a partir das navegações
+                        ajudaram a criar redes intercontinentais permanentes.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        Colonialismo
+                    </h3>
+
+                    <p>
+                        A expansão marítima foi fundamental para a construção
+                        de impérios coloniais europeus.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        Diversidade cultural
+                    </h3>
+
+                    <p>
+                        O contato entre sociedades provocou trocas culturais,
+                        mas também conflitos, imposições e processos de
+                        destruição de práticas e populações.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        Desigualdades históricas
+                    </h3>
+
+                    <p>
+                        Muitas estruturas econômicas e sociais criadas
+                        durante a expansão colonial deixaram consequências
+                        duradouras.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             O QUE O PROFESSOR PRECISA DOMINAR
+             ===================================================== -->
+
+        <section id="professor">
+
+            <div class="professor">
+
+                <h3>
+                    O QUE O PROFESSOR PRECISA DOMINAR
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Explicar que as Grandes Navegações resultaram de
+                        múltiplos fatores.
+                    </li>
+
+                    <li>
+                        Diferenciar expansão marítima de colonização.
+                    </li>
+
+                    <li>
+                        Explicar o papel de Portugal e Espanha.
+                    </li>
+
+                    <li>
+                        Conhecer as principais rotas marítimas.
+                    </li>
+
+                    <li>
+                        Explicar a importância econômica das especiarias.
+                    </li>
+
+                    <li>
+                        Relacionar técnica, conhecimento e navegação.
+                    </li>
+
+                    <li>
+                        Explicar o Tratado de Tordesilhas.
+                    </li>
+
+                    <li>
+                        Relacionar a expansão marítima à formação do
+                        mundo atlântico.
+                    </li>
+
+                    <li>
+                        Evitar a ideia de que a América foi simplesmente
+                        "descoberta".
+                    </li>
+
+                    <li>
+                        Reconhecer a participação histórica das sociedades
+                        africanas, americanas e asiáticas.
+                    </li>
+
+                    <li>
+                        Relacionar expansão marítima, colonialismo,
+                        escravização e formação das economias atlânticas.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             O QUE COLOCAR NA LOUSA
+             ===================================================== -->
+
+        <section>
+
+            <h2 class="section-title">
+                O que colocar na lousa
+            </h2>
+
+            <div class="lousa">
+
+                <h3>
+                    EXPANSÃO MARÍTIMO-COMERCIAL EUROPEIA
+                </h3>
+
+                <br>
+
+                <p>
+                    SÉCULOS XV–XVI
+                </p>
+
+                <br>
+
+                <p>
+                    CAUSAS:
+                </p>
+
+                <p>
+                    • Comércio com o Oriente
+                    <br>
+                    • Especiarias
+                    <br>
+                    • Busca por novas rotas
+                    <br>
+                    • Fortalecimento das monarquias
+                    <br>
+                    • Expansão religiosa
+                    <br>
+                    • Técnicas de navegação
+                </p>
+
+                <br>
+
+                <p>
+                    PORTUGAL → África → Índia
+                </p>
+
+                <p>
+                    ESPANHA → Atlântico → América
+                </p>
+
+                <br>
+
+                <p>
+                    1492 → Colombo
+                </p>
+
+                <p>
+                    1494 → Tordesilhas
+                </p>
+
+                <p>
+                    1498 → Vasco da Gama
+                </p>
+
+                <p>
+                    1500 → Cabral
+                </p>
+
+                <br>
+
+                <p>
+                    CONSEQUÊNCIAS:
+                </p>
+
+                <p>
+                    • Novas redes comerciais
+                    <br>
+                    • Colonialismo
+                    <br>
+                    • Conquista
+                    <br>
+                    • Escravização
+                    <br>
+                    • Mundo Atlântico
+                    <br>
+                    • Transformações culturais
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CONCEITOS
+             ===================================================== -->
+
+        <section>
+
+            <h2 class="section-title">
+                Conceitos que o aluno precisa saber
+            </h2>
+
+            <div class="grid">
+
+                <div class="conceito">
+
+                    <strong>
+                        Expansão marítima
+                    </strong>
+
+                    <p>
+                        Ampliação das atividades de exploração e navegação
+                        marítima europeia.
+                    </p>
+
+                </div>
+
+
+                <div class="conceito">
+
+                    <strong>
+                        Mercantilismo
+                    </strong>
+
+                    <p>
+                        Conjunto de práticas e ideias econômicas associadas
+                        às monarquias europeias da época moderna.
+                    </p>
+
+                </div>
+
+
+                <div class="conceito">
+
+                    <strong>
+                        Feitoria
+                    </strong>
+
+                    <p>
+                        Estabelecimento comercial utilizado em diferentes
+                        regiões para organizar atividades de comércio.
+                    </p>
+
+                </div>
+
+
+                <div class="conceito">
+
+                    <strong>
+                        Mundo Atlântico
+                    </strong>
+
+                    <p>
+                        Espaço histórico formado pelas conexões econômicas,
+                        políticas, sociais e culturais entre regiões
+                        banhadas pelo Atlântico.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CAUSA X CONSEQUÊNCIA
+             ===================================================== -->
+
+        <section>
+
+            <h2 class="section-title">
+                Causa → processo → consequência
+            </h2>
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Causa
+                            </th>
+
+                            <th>
+                                Processo
+                            </th>
+
+                            <th>
+                                Consequência
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                Busca por novas rotas
+                            </td>
+
+                            <td>
+                                Expedições marítimas
+                            </td>
+
+                            <td>
+                                Ampliação das conexões comerciais
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>
+                                Interesse nas especiarias
+                            </td>
+
+                            <td>
+                                Busca por acesso direto ao comércio oriental
+                            </td>
+
+                            <td>
+                                Novas rotas para África e Ásia
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>
+                                Fortalecimento das monarquias
+                            </td>
+
+                            <td>
+                                Financiamento e apoio às expedições
+                            </td>
+
+                            <td>
+                                Expansão política ultramarina
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>
+                                Expansão europeia
+                            </td>
+
+                            <td>
+                                Conquista e colonização
+                            </td>
+
+                            <td>
+                                Formação de impérios coloniais
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ENEM / VESTIBULAR / CONCURSO
+             ===================================================== -->
+
+        <section>
+
+            <h2 class="section-title">
+                Foco ENEM, vestibular e concurso
+            </h2>
+
+            <div class="card">
+
+                <h3>
+                    O que costuma ser cobrado?
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Relação entre expansão comercial e navegação.
+                    </li>
+
+                    <li>
+                        Motivações econômicas e políticas.
+                    </li>
+
+                    <li>
+                        Diferenças entre Portugal e Espanha.
+                    </li>
+
+                    <li>
+                        Tratado de Tordesilhas.
+                    </li>
+
+                    <li>
+                        Formação do mundo atlântico.
+                    </li>
+
+                    <li>
+                        Relações entre Europa, África, Ásia e América.
+                    </li>
+
+                    <li>
+                        Consequências para as populações indígenas.
+                    </li>
+
+                    <li>
+                        Escravização e tráfico atlântico.
+                    </li>
+
+                    <li>
+                        Formação do sistema colonial.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             BNCC
+             ===================================================== -->
+
+        <section id="bncc">
+
+            <h2 class="section-title">
+                BNCC — Alinhamento pedagógico
+            </h2>
+
+            <div class="bncc">
+
+                <span class="codigo-bncc">
+                    EF07HI02
+                </span>
+
+                <h3>
+                    Conexões entre sociedades
+                </h3>
+
+                <p>
+                    Identificar conexões e interações entre sociedades
+                    do Novo Mundo, da Europa, da África e da Ásia no
+                    contexto das navegações, considerando a complexidade
+                    das relações estabelecidas nos oceanos Atlântico,
+                    Índico e Pacífico.
+                </p>
+
+                <br>
+
+
+                <span class="codigo-bncc">
+                    EF07HI06
+                </span>
+
+                <h3>
+                    Expansionismo marítimo
+                </h3>
+
+                <p>
+                    Relacionar conhecimentos e descobertas ao expansionismo
+                    marítimo do início dos tempos modernos, diferenciando
+                    as navegações portuguesas e espanholas e reconhecendo
+                    disputas entre as monarquias ibéricas.
+                </p>
+
+                <br>
+
+
+                <span class="codigo-bncc">
+                    EF07HI13
+                </span>
+
+                <h3>
+                    Mundo atlântico e lógica mercantil
+                </h3>
+
+                <p>
+                    Relacionar a ação dos europeus e suas lógicas mercantis
+                    aos processos de domínio e organização do mundo atlântico.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             QUESTÕES
+             ===================================================== -->
+
+        <section id="questoes">
+
+            <h2 class="section-title">
+                Questões — estilo ENEM
+            </h2>
+
+            <div class="questoes">
+
+
+                <!-- QUESTÃO 1 -->
+
+                <article class="questao">
+
+                    <span class="numero-questao">
+                        QUESTÃO 01
+                    </span>
+
+                    <h3>
+                        Leia a situação histórica:
+                    </h3>
+
+                    <p>
+                        Durante o século XV, navegadores portugueses
+                        avançaram progressivamente pela costa africana.
+                        Esse processo ocorreu em um contexto de crescimento
+                        das atividades comerciais e de busca por novas
+                        possibilidades de acesso aos mercados africanos
+                        e asiáticos.
+                    </p>
+
+                    <p>
+                        Considerando esse contexto, a expansão portuguesa
+                        pode ser compreendida principalmente como:
+                    </p>
+
+                    <div class="alternativas">
+
+                        <div>
+                            A) uma tentativa de reconstruir o Império Romano.
+                        </div>
+
+                        <div>
+                            B) um processo relacionado à expansão comercial,
+                            política e marítima.
+                        </div>
+
+                        <div>
+                            C) uma expedição exclusivamente científica,
+                            sem interesses econômicos.
+                        </div>
+
+                        <div>
+                            D) uma política destinada a eliminar o comércio
+                            europeu com a Ásia.
+                        </div>
+
+                        <div>
+                            E) uma consequência direta da Revolução Industrial.
+                        </div>
+
+                    </div>
+
+                    <button onclick="mostrarResposta(1)">
+                        Mostrar gabarito
+                    </button>
+
+                    <div id="resposta1" class="resposta">
+
+                        <strong>
+                            Gabarito: B
+                        </strong>
+
+                        <p>
+                            A expansão portuguesa esteve relacionada a
+                            interesses comerciais, políticos e religiosos,
+                            além do desenvolvimento das navegações.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- QUESTÃO 2 -->
+
+                <article class="questao">
+
+                    <span class="numero-questao">
+                        QUESTÃO 02
+                    </span>
+
+                    <h3>
+                        Observe a relação histórica:
+                    </h3>
+
+                    <p>
+                        Portugal avançou pela costa africana e buscou uma
+                        rota marítima para o Oriente. A Espanha apoiou
+                        Cristóvão Colombo em uma viagem pelo Atlântico
+                        que chegou ao Caribe em 1492.
+                    </p>
+
+                    <p>
+                        Uma consequência histórica desse processo foi:
+                    </p>
+
+                    <div class="alternativas">
+
+                        <div>
+                            A) o isolamento definitivo dos continentes.
+                        </div>
+
+                        <div>
+                            B) o fim das atividades comerciais marítimas.
+                        </div>
+
+                        <div>
+                            C) a ampliação das conexões entre diferentes
+                            sociedades e a formação de novas relações de poder.
+                        </div>
+
+                        <div>
+                            D) a extinção das sociedades africanas e americanas.
+                        </div>
+
+                        <div>
+                            E) o desaparecimento das disputas entre as
+                            monarquias europeias.
+                        </div>
+
+                    </div>
+
+                    <button onclick="mostrarResposta(2)">
+                        Mostrar gabarito
+                    </button>
+
+                    <div id="resposta2" class="resposta">
+
+                        <strong>
+                            Gabarito: C
+                        </strong>
+
+                        <p>
+                            As navegações ampliaram as conexões entre
+                            sociedades, mas também produziram conflitos,
+                            conquistas, exploração e novas relações
+                            econômicas e políticas.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             REVISÃO FINAL
+             ===================================================== -->
+
+        <section>
+
+            <h2 class="section-title">
+                Revisão em 10 pontos
+            </h2>
+
+            <div class="card">
+
+                <ol>
+
+                    <li>
+                        A expansão marítima ocorreu principalmente
+                        entre os séculos XV e XVI.
+                    </li>
+
+                    <li>
+                        Portugal e Espanha tiveram papel central.
+                    </li>
+
+                    <li>
+                        A busca por novas rotas comerciais foi importante.
+                    </li>
+
+                    <li>
+                        As especiarias tinham elevado valor comercial.
+                    </li>
+
+                    <li>
+                        As monarquias apoiaram projetos de expansão.
+                    </li>
+
+                    <li>
+                        Conhecimentos náuticos favoreceram as viagens.
+                    </li>
+
+                    <li>
+                        Portugal avançou pela costa africana e chegou à Índia.
+                    </li>
+
+                    <li>
+                        A Espanha apoiou Colombo em 1492.
+                    </li>
+
+                    <li>
+                        A expansão produziu conexões, mas também conquista,
+                        exploração e escravização.
+                    </li>
+
+                    <li>
+                        O processo contribuiu para a formação do mundo
+                        atlântico e do sistema colonial.
+                    </li>
+
+                </ol>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             NAVEGAÇÃO ENTRE CAPÍTULOS
+             ===================================================== -->
+
+        <section>
+
+            <div class="card">
+
+                <h2>
+                    Capítulo concluído
+                </h2>
+
+                <p>
+                    Você estudou a formação, o desenvolvimento e os
+                    impactos da expansão marítimo-comercial europeia.
+                </p>
+
+                <p>
+                    O próximo tema será:
+                </p>
+
+                <h3>
+                    1.20 — ABSOLUTISMO
+                </h3>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         RODAPÉ
+         ========================================================= -->
+
+    <footer>
+
+        <p>
+            <strong>Curso de História Geral</strong>
+        </p>
+
+        <p>
+            Fund II • Ensino Médio • ENEM • Vestibular • Concurso
+        </p>
+
+        <p>
+            Professor Marcelo Oliveira
+        </p>
+
+    </footer>
+
+
+    <!-- =========================================================
+         BOTÃO VOLTAR AO TOPO
+         ========================================================= -->
+
+    <a id="topo" href="#inicio">
+        ↑
+    </a>
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+         ========================================================= -->
+
+    <script>
+
+        // Cria a função responsável por mostrar ou esconder cada gabarito.
+        function mostrarResposta(numero) {
+
+            // Localiza o elemento correspondente ao número da questão.
+            const resposta = document.getElementById("resposta" + numero);
+
+            // Verifica se o gabarito está escondido.
+            if (resposta.style.display === "none" || resposta.style.display === "") {
+
+                // Mostra o gabarito.
+                resposta.style.display = "block";
+
+            } else {
+
+                // Esconde novamente o gabarito.
+                resposta.style.display = "none";
+
+            }
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
