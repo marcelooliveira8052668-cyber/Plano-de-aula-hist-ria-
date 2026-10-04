@@ -364,6 +364,27 @@
 
         // Inicialização
         renderTopics(topics);
+        document.addEventListener("DOMContentLoaded", function() {
+    if (typeof topics === "undefined") return;
+
+    const currentPage = window.location.pathname.split("/").pop();
+    const currentIndex = topics.findIndex(t => t.file === currentPage);
+    if (currentIndex === -1) return;
+
+    const prev = currentIndex > 0 ? topics[currentIndex - 1] : null;
+    const next = currentIndex < topics.length - 1 ? topics[currentIndex + 1] : null;
+
+    const nav = document.createElement("div");
+    nav.style.cssText = "display: flex; justify-content: space-between; margin: 40px 0; padding: 10px;";
+    
+    nav.innerHTML = `
+        ${prev ? `<a href="${prev.file}" style="padding: 10px 20px; background: #4a5568; color: white; text-decoration: none; border-radius: 5px;">⬅️ ${prev.name}</a>` : '<div></div>'}
+        ${next ? `<a href="${next.file}" style="padding: 10px 20px; background: #3182ce; color: white; text-decoration: none; border-radius: 5px;">${next.name} ➡️</a>` : '<div></div>'}
+    `;
+
+    document.body.appendChild(nav);
+});
+
     </script>
 </body>
 
