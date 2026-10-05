@@ -1,681 +1,257 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
-    <!-- Define a codificação de caracteres para permitir acentos e caracteres especiais. -->
     <meta charset="UTF-8">
-
-    <!-- Faz o site se adaptar corretamente a celulares, tablets e computadores. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Define o título exibido na aba do navegador. -->
     <title>1.43 — República Liberal Populista | Professor Marcelo Oliveira</title>
-
     <style>
-
-        /* ========================================================= */
-        /* CONFIGURAÇÕES GERAIS                                     */
-        /* ========================================================= */
-
-        /* Remove margens e espaçamentos padrão do navegador. */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Define o comportamento de rolagem suave. */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Define a aparência geral da página. */
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f4f7fb;
-            color: #263238;
-            line-height: 1.7;
-        }
-
-        /* Define a largura máxima e centraliza o conteúdo. */
-        .container {
-            width: 92%;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        /* ========================================================= */
-        /* CABEÇALHO                                                 */
-        /* ========================================================= */
-
-        /* Cria o cabeçalho principal. */
-        header {
-            background: linear-gradient(135deg, #172554, #2563eb);
-            color: white;
-            padding: 50px 20px;
-            text-align: center;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.18);
-        }
-
-        /* Define o pequeno texto superior do cabeçalho. */
-        .eyebrow {
-            font-size: 0.95rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            opacity: 0.9;
-            margin-bottom: 12px;
-        }
-
-        /* Define o título principal. */
-        header h1 {
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            margin-bottom: 15px;
-        }
-
-        /* Define o subtítulo. */
-        header p {
-            max-width: 850px;
-            margin: auto;
-            font-size: 1.1rem;
-        }
-
-        /* ========================================================= */
-        /* NAVEGAÇÃO                                                 */
-        /* ========================================================= */
-
-        /* Cria a área dos botões de navegação. */
-        .navegacao {
-            display: flex;
-            justify-content: space-between;
-            gap: 15px;
-            margin: 25px auto;
-            flex-wrap: wrap;
-        }
-
-        /* Estiliza os links da navegação. */
-        .btn {
-            display: inline-block;
-            padding: 13px 20px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        /* Define o botão anterior. */
-        .btn-voltar {
-            background: #475569;
-            color: white;
-        }
-
-        /* Define o botão próximo. */
-        .btn-proximo {
-            background: #2563eb;
-            color: white;
-        }
-
-        /* Cria efeito ao passar o mouse. */
-        .btn:hover {
-            transform: translateY(-2px);
-            opacity: 0.9;
-        }
-
-        /* ========================================================= */
-        /* APRESENTAÇÃO                                              */
-        /* ========================================================= */
-
-        /* Cria o cartão de apresentação. */
-        .apresentacao {
-            background: white;
-            margin: 30px auto;
-            padding: 30px;
-            border-radius: 18px;
-            border-left: 7px solid #2563eb;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-        }
-
-        /* ========================================================= */
-        /* SEÇÕES COLORIDAS                                         */
-        /* ========================================================= */
-
-        /* Define o cartão geral de conteúdo. */
-        .secao {
-            margin: 35px auto;
-            padding: 30px;
-            border-radius: 18px;
-            background: white;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
-        }
-
-        /* Define a cor da Parte I. */
-        .comeco {
-            border-top: 8px solid #2563eb;
-        }
-
-        /* Define a cor da Parte II. */
-        .desenvolvimento {
-            border-top: 8px solid #16a34a;
-        }
-
-        /* Define a cor da Parte III. */
-        .legado {
-            border-top: 8px solid #7c3aed;
-        }
-
-        /* Define a cor da seção de causas. */
-        .causas {
-            border-top: 8px solid #f97316;
-        }
-
-        /* Define a cor da seção de consequências. */
-        .consequencias {
-            border-top: 8px solid #eab308;
-        }
-
-        /* Define a cor da seção de atenção histórica. */
-        .atencao {
-            border-top: 8px solid #dc2626;
-        }
-
-        /* Define a cor da seção ENEM. */
-        .enem {
-            border-top: 8px solid #0891b2;
-        }
-
-        /* Define a cor da lousa. */
-        .lousa {
-            border-top: 8px solid #111827;
-        }
-
-        /* ========================================================= */
-        /* TÍTULOS                                                    */
-        /* ========================================================= */
-
-        /* Define o estilo dos títulos das seções. */
-        .secao h2 {
-            margin-bottom: 20px;
-            color: #172554;
-            font-size: 1.8rem;
-        }
-
-        /* Define o estilo dos subtítulos. */
-        .secao h3 {
-            margin-top: 25px;
-            margin-bottom: 10px;
-            color: #334155;
-        }
-
-        /* Destaca palavras importantes. */
-        strong {
-            color: #172554;
-        }
-
-        /* ========================================================= */
-        /* LISTAS                                                     */
-        /* ========================================================= */
-
-        /* Cria espaçamento interno nas listas. */
-        ul,
-        ol {
-            margin: 15px 0 15px 25px;
-        }
-
-        /* Cria espaço entre itens das listas. */
-        li {
-            margin-bottom: 8px;
-        }
-
-        /* ========================================================= */
-        /* LINHA DO TEMPO                                            */
-        /* ========================================================= */
-
-        /* Cria a estrutura da linha do tempo. */
-        .timeline {
-            border-left: 4px solid #2563eb;
-            padding-left: 25px;
-            margin-top: 25px;
-        }
-
-        /* Cria cada acontecimento da linha do tempo. */
-        .evento {
-            margin-bottom: 25px;
-            position: relative;
-        }
-
-        /* Cria a bolinha da linha do tempo. */
-        .evento::before {
-            content: "";
-            position: absolute;
-            left: -36px;
-            top: 7px;
-            width: 14px;
-            height: 14px;
-            background: #2563eb;
-            border-radius: 50%;
-        }
-
-        /* Destaca o ano. */
-        .ano {
-            font-weight: bold;
-            color: #2563eb;
-        }
-
-        /* ========================================================= */
-        /* TABELAS                                                    */
-        /* ========================================================= */
-
-        /* Permite rolagem horizontal em tabelas pequenas. */
-        .tabela-container {
-            overflow-x: auto;
-            margin-top: 20px;
-        }
-
-        /* Define a tabela. */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            min-width: 650px;
-        }
-
-        /* Define células da tabela. */
-        th,
-        td {
-            padding: 14px;
-            border: 1px solid #cbd5e1;
-            text-align: left;
-        }
-
-        /* Define o cabeçalho da tabela. */
-        th {
-            background: #172554;
-            color: white;
-        }
-
-        /* Alterna visualmente as linhas. */
-        tr:nth-child(even) {
-            background: #f8fafc;
-        }
-
-        /* ========================================================= */
-        /* CONCEITOS                                                  */
-        /* ========================================================= */
-
-        /* Cria a grade de conceitos. */
-        .conceitos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        /* Cria cada cartão de conceito. */
-        .conceito {
-            background: #eff6ff;
-            border: 1px solid #bfdbfe;
-            padding: 18px;
-            border-radius: 12px;
-        }
-
-        /* ========================================================= */
-        /* QUESTÕES                                                   */
-        /* ========================================================= */
-
-        /* Cria o cartão de questão. */
-        .questao {
-            background: #f8fafc;
-            padding: 25px;
-            border-radius: 14px;
-            margin-top: 20px;
-            border-left: 5px solid #0891b2;
-        }
-
-        /* Cria o botão de gabarito. */
-        .btn-gabarito {
-            margin-top: 15px;
-            background: #0891b2;
-            color: white;
-            border: none;
-            padding: 12px 18px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        /* Esconde o gabarito inicialmente. */
-        .gabarito {
-            display: none;
-            margin-top: 15px;
-            padding: 15px;
-            background: #ecfeff;
-            border-radius: 10px;
-            border: 1px solid #67e8f9;
-        }
-
-        /* ========================================================= */
-        /* RESUMO                                                     */
-        /* ========================================================= */
-
-        /* Cria o cartão do resumo. */
-        .resumo {
-            background: #172554;
-            color: white;
-            padding: 30px;
-            border-radius: 18px;
-            margin: 35px auto;
-        }
-
-        /* Remove a cor escura dos textos fortes dentro do resumo. */
-        .resumo strong {
-            color: white;
-        }
-
-        /* ========================================================= */
-        /* RODAPÉ                                                     */
-        /* ========================================================= */
-
-        /* Cria o rodapé. */
-        footer {
-            background: #0f172a;
-            color: white;
-            text-align: center;
-            padding: 35px 20px;
-            margin-top: 50px;
-        }
-
-        /* Define a assinatura. */
-        .assinatura {
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-
-        /* ========================================================= */
-        /* BOTÃO VOLTAR AO TOPO                                      */
-        /* ========================================================= */
-
-        /* Cria o botão fixo. */
-        #topo {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 48px;
-            height: 48px;
-            border: none;
-            border-radius: 50%;
-            background: #2563eb;
-            color: white;
-            cursor: pointer;
-            font-size: 20px;
-            display: none;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
-        }
-
-        /* ========================================================= */
-        /* RESPONSIVIDADE                                             */
-        /* ========================================================= */
-
-        /* Ajusta o conteúdo para telas menores. */
-        @media (max-width: 700px) {
-
-            /* Reduz o espaçamento dos cartões. */
-            .secao,
-            .apresentacao {
-                padding: 20px;
-            }
-
-            /* Organiza os botões verticalmente. */
-            .navegacao {
-                flex-direction: column;
-            }
-
-            /* Faz os botões ocuparem a largura disponível. */
-            .btn {
-                text-align: center;
-            }
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: Arial, Helvetica, sans-serif; background: #f4f7fb; color: #263238; line-height: 1.7; }
+        .container { width: 92%; max-width: 1200px; margin: auto; }
+        header { background: linear-gradient(135deg, #172554, #2563eb); color: white; padding: 50px 20px; text-align: center; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.18); }
+        .eyebrow { font-size: 0.95rem; letter-spacing: 2px; text-transform: uppercase; opacity: 0.9; margin-bottom: 12px; }
+        header h1 { font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 15px; }
+        header p { max-width: 850px; margin: auto; font-size: 1.1rem; }
+        .navegacao { display: flex; justify-content: space-between; gap: 15px; margin: 25px auto; flex-wrap: wrap; }
+        .btn { display: inline-block; padding: 13px 20px; border-radius: 10px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+        .btn-voltar { background: #475569; color: white; }
+        .btn-proximo { background: #2563eb; color: white; }
+        .btn:hover { transform: translateY(-2px); opacity: 0.9; }
+        .apresentacao { background: white; margin: 30px auto; padding: 30px; border-radius: 18px; border-left: 7px solid #2563eb; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); }
+        .secao { margin: 35px auto; padding: 30px; border-radius: 18px; background: white; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07); }
+        .comeco { border-top: 8px solid #2563eb; }
+        .desenvolvimento { border-top: 8px solid #16a34a; }
+        .legado { border-top: 8px solid #7c3aed; }
+        .consequencias { border-top: 8px solid #eab308; }
+        .enem { border-top: 8px solid #0891b2; }
+        .lousa { border-top: 8px solid #111827; }
+        .secao h2 { margin-bottom: 20px; color: #172554; font-size: 1.8rem; }
+        .secao h3 { margin-top: 25px; margin-bottom: 10px; color: #334155; }
+        strong { color: #172554; }
+        ul, ol { margin: 15px 0 15px 25px; }
+        li { margin-bottom: 8px; }
+        .timeline { border-left: 4px solid #2563eb; padding-left: 25px; margin-top: 25px; }
+        .evento { margin-bottom: 25px; position: relative; }
+        .evento::before { content: ""; position: absolute; left: -36px; top: 7px; width: 14px; height: 14px; background: #2563eb; border-radius: 50%; }
+        .ano { font-weight: bold; color: #2563eb; }
+        .tabela-container { overflow-x: auto; margin-top: 20px; }
+        table { width: 100%; border-collapse: collapse; min-width: 650px; }
+        th, td { padding: 14px; border: 1px solid #cbd5e1; text-align: left; }
+        th { background: #172554; color: white; }
+        tr:nth-child(even) { background: #f8fafc; }
+        .conceitos { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-top: 20px; }
+        .conceito { background: #eff6ff; border: 1px solid #bfdbfe; padding: 18px; border-radius: 12px; }
+        .questao { background: #f8fafc; padding: 25px; border-radius: 14px; margin-top: 20px; border-left: 5px solid #0891b2; }
+        .btn-gabarito { margin-top: 15px; background: #0891b2; color: white; border: none; padding: 12px 18px; border-radius: 8px; cursor: pointer; font-weight: bold; }
+        .gabarito { display: none; margin-top: 15px; padding: 15px; background: #ecfeff; border-radius: 10px; border: 1px solid #67e8f9; }
+        .resumo { background: #172554; color: white; padding: 30px; border-radius: 18px; margin: 35px auto; }
+        .resumo strong { color: white; }
+        footer { background: #0f172a; color: white; text-align: center; padding: 35px 20px; margin-top: 50px; }
+        .assinatura { font-size: 1.2rem; font-weight: bold; margin-top: 10px; }
+        #topo { position: fixed; bottom: 20px; right: 20px; width: 48px; height: 48px; border: none; border-radius: 50%; background: #2563eb; color: white; cursor: pointer; font-size: 20px; display: none; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25); }
+        @media (max-width: 700px) { .secao, .apresentacao { padding: 20px; } .navegacao { flex-direction: column; } .btn { text-align: center; } }
     </style>
 </head>
 
 <body id="inicio">
 
-    <!-- ========================================================= -->
-    <!-- CABEÇALHO                                                  -->
-    <!-- ========================================================= -->
-
     <header>
-
-        <!-- Identificação do curso. -->
         <div class="eyebrow">Curso de História Geral</div>
-
-        <!-- Título principal. -->
         <h1>1.43 — República Liberal Populista</h1>
-
-        <!-- Apresentação do conteúdo. -->
-        <p>
-            O período democrático de 1946 a 1964, com eleições, industrialização e a política populista.
-        </p>
-
+        <p>O período democrático de 1946 a 1964: redemocratização, populismo, desenvolvimento e a crise que levou ao golpe de 1964.</p>
     </header>
-
-    <!-- ========================================================= -->
-    <!-- CONTEÚDO PRINCIPAL                                        -->
-    <!-- ========================================================= -->
 
     <main class="container">
 
-        <p>
-            Por que estudar a República Liberal Populista? Porque foi um dos poucos períodos democráticos do Brasil, marcado por eleições, obras e a polarização política que levou a 1964.
-        </p>
-        <section class="secao parte">
-            <h2>🔵 I — A DEMOCRACIA</h2>
-            <h3>1. Fim do Estado Novo</h3>
-            <p>
-                Com a redemocratização de 1945, Gaspar Dutra foi eleito presidente pela primeira eleição direta desde 1930.
-            </p>
-<h3>2. De volta ao populismo</h3>
-            <p>
-                Getúlio Vargas voltou ao poder pelo voto em 1951, buscando conciliar nacionalismo e desenvolvimento.
-            </p>
+        <nav class="navegacao">
+            <a class="btn btn-voltar" href="42 - Era Vargas.html">← Era Vargas</a>
+            <a class="btn btn-proximo" href="44 - Revoluções Liberais.html">Revoluções Liberais →</a>
+        </nav>
+
+        <section class="apresentacao">
+            <p>Por que estudar a República Liberal Populista? Porque ela representa o ciclo democrático mais longo da Primeira República, marcado pela disputa política entre populistas e conservadores, por grandes projetos de desenvolvimento e pela crise que encerrou esse período em 1964.</p>
         </section>
-        <section class="secao parte">
-            <h2>🟢 II — O CRESCIMENTO</h2>
-            <h3>3. Juscelino Kubitschek</h3>
-            <p>
-                JK, eleito em 1955, acelerou o desenvolvimento com o Plano de Metas e construiu Brasília, nova capital do Brasil.
-            </p>
-<h3>4. Crise final</h3>
-            <p>
-                A crise política e a renúncia de Jânio Quadros levaram à posse de João Goulart, que enfrentaria forte oposição até o golpe de 1964.
-            </p>
+
+        <section class="secao comeco">
+            <h2>🔵 I — O COMEÇO: A REDEMOCRATIZAÇÃO (1945–1951)</h2>
+
+            <h3>1. O fim do Estado Novo</h3>
+            <p>Em 1945, Getúlio Vargas foi deposto pelos militares e o Estado Novo chegou ao fim. O Brasil iniciou o processo de redemocratização, com a reabertura aos partidos e a eleição de uma Assembleia Constituinte.</p>
+
+            <h3>2. A Constituição de 1946</h3>
+            <p>A nova Constituição restaurou liberdades democráticas, o voto direto e secreto, a liberdade de imprensa e a organização partidária. Getúlio Vargas, porém, continuava a ser uma figura política central.</p>
+
+            <h3>3. O governo Dutra (1946–1951)</h3>
+            <p>Eurico Gaspar Dutra, o primeiro presidente do período, governou com tendência liberal-conservadora. O Brasil se alinhou aos EUA na Guerra Fria e rompeu relações com a União Soviética.</p>
+
+            <h3>4. A volta de Getúlio (1951–1954)</h3>
+            <p>Em 1951, Vargas retornou ao poder pelo voto popular. Nesse período, criou a Petrobras e a Eletrobras, consolidando uma política nacionalista de desenvolvimento. A crise política e a oposição crescente levaram ao seu suicídio em 1954.</p>
         </section>
+
+        <section class="secao desenvolvimento">
+            <h2>🟢 II — O DESENVOLVIMENTO: POPULISMO E DESENVOLVIMENTO</h2>
+
+            <h3>5. Juscelino Kubitschek (1956–1961)</h3>
+            <p>JK prometeu "50 anos em 5" e acelerou a industrialização com o Plano de Metas. Construiu Brasília e atraiu indústrias automobilísticas para o país. Porém, a dívida externa e a inflação aumentaram.</p>
+
+            <h3>6. A renúncia de Jânio Quadros (1961)</h3>
+            <p>Jânio Quadros venceu a eleição de 1960, mas renunciou repentinamente em 1961. Seu vice, João Goulart, estava em viagem ao exterior, o que provocou uma crise institucional.</p>
+
+            <h3>7. O governo Goulart (1961–1964)</h3>
+            <p>João Goulart assumiu a presidência, mas encontrou forte oposição da UDN, do Exército e das elites. Defendia reformas de base — agrária, urbana, educacional e trabalhista — que dividiam o país. A crise econômica e o esgotamento político culminaram no golpe de 1964.</p>
+        </section>
+
+        <section class="secao comeco">
+            <h2>📅 LINHA DO TEMPO</h2>
+            <div class="timeline">
+                <div class="evento"><span class="ano">1945</span> — Fim do Estado Novo e redemocratização.</div>
+                <div class="evento"><span class="ano">1946</span> — Constituição de 1946 e posse de Dutra.</div>
+                <div class="evento"><span class="ano">1951</span> — Getúlio Vargas volta ao poder pelo voto.</div>
+                <div class="evento"><span class="ano">1954</span> — Suicídio de Getúlio Vargas.</div>
+                <div class="evento"><span class="ano">1956–1961</span> — Governo de Juscelino Kubitschek.</div>
+                <div class="evento"><span class="ano">1961</span> — Renúncia de Jânio Quadros.</div>
+                <div class="evento"><span class="ano">1961–1964</span> — Governo de João Goulart.</div>
+                <div class="evento"><span class="ano">1964</span> — Golpe civil-militar e início da ditadura.</div>
+            </div>
+        </section>
+
         <section class="secao consequencias">
             <h2>🟡 Consequências</h2>
             <ul>
-                <li>Retorno da democracia após o Estado Novo.</li>
-                <li>Rápido crescimento industrial e rodoviarista.</li>
-                <li>Construção de Brasília.</li>
-                <li>Polarização política e golpe de 1964.</li>
+                <li>Redemocratização e eleição direta de presidentes.</li>
+                <li>Alternância entre governos populistas e conservadores.</li>
+                <li>Rápido desenvolvimento industrial e modernização econômica.</li>
+                <li>Crise política e social intensa no início dos anos 1960.</li>
+                <li>Golpe de 1964 e início da Ditadura Militar.</li>
             </ul>
         </section>
+
         <section class="secao legado">
             <h2>🟣 III — O LEGADO E O MUNDO ATUAL</h2>
-            <p>
-                A República Liberal Populista mostrou a força da democracia brasileira, mas também suas dificuldades, encerrando-se com o golpe de 1964.
-            </p>
-<ul>
-                <li>Plano de Metas</li>
-                <li>JK e Brasília</li>
-                <li>Getúlio Vargas volta em 1951</li>
+            <p>A República Liberal Populista deixou um legado de desenvolvimento, construção de Brasília, expansão industrial e avanços democráticos. Contudo, a polarização política e a dificuldade de conciliar reformas sociais com a manutenção da ordem vigente acabaram levando ao golpe de 1964.</p>
+        </section>
+
+        <section class="secao">
+            <h2>📊 RESUMO: REPÚBLICA LIBERAL POPULISTA</h2>
+            <div class="tabela-container">
+                <table>
+                    <thead>
+                        <tr><th>Período</th><th>Característica</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1946–1951</td><td>Dutra: alinhamento aos EUA</td></tr>
+                        <tr><td>1951–1954</td><td>Getúlio: Petrobras e Eletrobras</td></tr>
+                        <tr><td>1956–1961</td><td>JK: Plano de Metas e Brasília</td></tr>
+                        <tr><td>1961</td><td>Jânio renuncia</td></tr>
+                        <tr><td>1961–1964</td><td>Jango: reformas de base e crise</td></tr>
+                        <tr><td>1964</td><td>Golpe civil-militar</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="secao lousa">
+            <h2>📋 BNCC — COMO TRABALHAR ESTE TEMA</h2>
+            <p>A BNCC sugere relacionar o período com a polarização política do contexto da Guerra Fria e as disputas em torno de projetos de desenvolvimento.</p>
+            <ul>
+                <li><strong>Habilidade (EF09HI04):</strong> Identificar as características da República Liberal Populista e o papel do populismo.</li>
+                <li><strong>Habilidade (EF09HI05):</strong> Compreender as causas da crise política e econômica que levou ao golpe de 1964.</li>
+                <li><strong>Objetivo:</strong> Comparar os governos de Dutra, Getúlio, JK, Jânio e Jango.</li>
+            </ul>
+            <h3>💡 Sugestão de aula</h3>
+            <ul>
+                <li>Linha do tempo do período de 1946 a 1964.</li>
+                <li>Debate: "As reformas de base de Jango eram necessárias?"</li>
+                <li>Análise de slogans do governo JK e da campanha de Getúlio.</li>
             </ul>
         </section>
+
+        <section class="secao">
+            <h2>📚 CONCEITOS FUNDAMENTAIS</h2>
+            <div class="conceitos">
+                <div class="conceito"><strong>Redemocratização</strong><br>Retorno do regime democrático após o Estado Novo (1945).</div>
+                <div class="conceito"><strong>Populismo</strong><br>Estilo político que buscava o apoio popular com medidas nacionalistas e sociais.</div>
+                <div class="conceito"><strong>Petrobras</strong><br>Empresa estatal criada por Getúlio em 1953.</div>
+                <div class="conceito"><strong>Plano de Metas</strong><br>Projeto de desenvolvimento de JK, "50 anos em 5".</div>
+                <div class="conceito"><strong>Brasília</strong><br>Nova capital inaugurada em 1960.</div>
+                <div class="conceito"><strong>Reformas de Base</strong><br>Propostas de Jango para o agrário, urbano, educacional e trabalhista.</div>
+                <div class="conceito"><strong>UDN</strong><br>União Democrática Nacional, partido conservador da oposição.</div>
+                <div class="conceito"><strong>Golpe de 1964</strong><br>Intervenção militar que encerrou a democracia do período.</div>
+            </div>
+        </section>
+
         <section class="secao enem">
             <h2>🎯 ENEM, Vestibular e Concurso</h2>
             <p>Teste seus conhecimentos:</p>
-            
+
             <div class="questao">
                 <h3>Questão 1</h3>
-                <p>
-                    JK construiu a nova capital do Brasil chamada:
-                </p>
+                <p>Durante a República Liberal Populista, Getúlio Vargas retornou ao poder em 1951. Uma de suas principais realizações econômicas foi:</p>
                 <ol type="A">
-                        <li>
-                            Brasília
-                        </li>
-                        <li>
-                            Goiânia
-                        </li>
-                        <li>
-                            Curitiba
-                        </li>
-                        <li>
-                            Belo Horizonte
-                        </li>
-                        <li>
-                            Porto Alegre
-                        </li>
+                    <li>A construção de Brasília.</li>
+                    <li>A criação da Petrobras e da Eletrobras.</li>
+                    <li>A abertura total da economia ao capital estrangeiro.</li>
+                    <li>A privatização das estatais.</li>
+                    <li>O ingresso do Brasil na União Europeia.</li>
                 </ol>
-                <button class="btn-gabarito" onclick="mostrarGabarito('g1')">
-                    Mostrar gabarito
-                </button>
+                <button class="btn-gabarito" onclick="mostrarGabarito('g1')">Mostrar gabarito</button>
                 <div class="gabarito" id="g1">
-                    <strong>Resposta: A.</strong>
-                    Brasília foi inaugurada em 1960 por Juscelino Kubitschek.
+                    <strong>Resposta: B.</strong> Getúlio criou a Petrobras (1953) e a Eletrobras (1961), marcando uma política de desenvolvimento nacionalista.
                 </div>
             </div>
-            
+
             <div class="questao">
                 <h3>Questão 2</h3>
-                <p>
-                    A República Liberal Populista compreende os anos de:
-                </p>
+                <p>O governo de Juscelino Kubitschek ficou marcado por:</p>
                 <ol type="A">
-                        <li>
-                            1946 a 1964
-                        </li>
-                        <li>
-                            1930 a 1945
-                        </li>
-                        <li>
-                            1889 a 1930
-                        </li>
-                        <li>
-                            1964 a 1985
-                        </li>
-                        <li>
-                            1945 a 1964
-                        </li>
+                    <li>A ditadura do Estado Novo.</li>
+                    <li>O Plano de Metas e a construção de Brasília.</li>
+                    <li>O fim da democracia e a instalação da ditadura militar.</li>
+                    <li>O socialismo e a reforma agrária radical.</li>
+                    <li>A assinatura do Tratado de Paz com o Paraguai.</li>
                 </ol>
-                <button class="btn-gabarito" onclick="mostrarGabarito('g2')">
-                    Mostrar gabarito
-                </button>
+                <button class="btn-gabarito" onclick="mostrarGabarito('g2')">Mostrar gabarito</button>
                 <div class="gabarito" id="g2">
-                    <strong>Resposta: A.</strong>
-                    O período democrático vai da Constituição de 1946 ao golpe de 1964.
+                    <strong>Resposta: B.</strong> JK acelerou o desenvolvimento com o Plano de Metas, que incluía a construção de Brasília.
                 </div>
             </div>
         </section>
-        <section class="secao resumo">
-            <h2>🧠 Resumo para o professor</h2>
+
+        <section class="resumo">
+            <h2>🧠 RESUMO PARA O PROFESSOR</h2>
             <p>
-                Tema: República Liberal Populista. Estude os conceitos, contextos e consequências para as provas e aulas.
+                <strong>Tema:</strong> República Liberal Populista (1946–1964).<br>
+                <strong>Presidentes:</strong> Dutra → Getúlio → JK → Jânio → Jango.<br>
+                <strong>Marco econômico:</strong> Plano de Metas e Brasília.<br>
+                <strong>Crise final:</strong> Reformas de base de Jango e golpe de 1964.<br>
+                <strong>Habilidade BNCC:</strong> EF09HI04 e EF09HI05 — República Liberal Populista e golpe de 1964.
             </p>
         </section>
-        <nav class="navegacao">
-            <a class="btn btn-voltar" href="42 - Era Vargas.html">
-                ← Anterior
-            </a>
-            <a class="btn btn-proximo" href="">
-                Próximo →
-            </a>
-        </nav>
-    </main>
-    </main>
 
-    <!-- ========================================================= -->
-    <!-- RODAPÉ                                                    -->
-    <!-- ========================================================= -->
+        <nav class="navegacao">
+            <a class="btn btn-voltar" href="42 - Era Vargas.html">← Era Vargas</a>
+            <a class="btn btn-proximo" href="44 - Revoluções Liberais.html">Revoluções Liberais →</a>
+        </nav>
+
+    </main>
 
     <footer>
-
-        <p>
-            Curso de História Geral — Fund II • Ensino Médio • ENEM • Vestibular • Concurso
-        </p>
-
-        <p class="assinatura">
-            Professor Marcelo Oliveira
-        </p>
-
+        <p>Curso de História Geral — Fund II • Ensino Médio • ENEM • Vestibular • Concurso</p>
+        <p class="assinatura">Professor Marcelo Oliveira</p>
     </footer>
 
-    <!-- ========================================================= -->
-    <!-- BOTÃO VOLTAR AO TOPO                                      -->
-    <!-- ========================================================= -->
-
-    <button id="topo" onclick="voltarAoTopo()">
-        ↑
-    </button>
-
-    <!-- ========================================================= -->
-    <!-- JAVASCRIPT                                                 -->
-    <!-- ========================================================= -->
+    <button id="topo" onclick="voltarAoTopo()">↑</button>
 
     <script>
-
-        // Cria a função responsável por mostrar ou esconder o gabarito.
         function mostrarGabarito(id) {
-
-            // Localiza o elemento pelo seu ID.
             const resposta = document.getElementById(id);
-
-            // Verifica se o gabarito está escondido.
-            if (resposta.style.display === "block") {
-
-                // Esconde o gabarito novamente.
-                resposta.style.display = "none";
-
-            } else {
-
-                // Mostra o gabarito.
-                resposta.style.display = "block";
-
-            }
-
+            resposta.style.display = (resposta.style.display === "block") ? "none" : "block";
         }
-
-        // Localiza o botão de voltar ao topo.
         const botaoTopo = document.getElementById("topo");
-
-        // Detecta quando o usuário movimenta a página.
-        window.addEventListener("scroll", function () {
-
-            // Verifica se a página foi deslocada verticalmente.
-            if (window.scrollY > 400) {
-
-                // Mostra o botão.
-                botaoTopo.style.display = "block";
-
-            } else {
-
-                // Esconde o botão.
-                botaoTopo.style.display = "none";
-
-            }
-
-        });
-
-        // Cria a função que leva o usuário ao início da página.
-        function voltarAoTopo() {
-
-            // Faz a página voltar suavemente para o topo.
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-
-        }
-
+        window.addEventListener("scroll", function () { botaoTopo.style.display = window.scrollY > 400 ? "block" : "none"; });
+        function voltarAoTopo() { window.scrollTo({ top: 0, behavior: "smooth" }); }
     </script>
     <script>
   const paginaAnterior = "42 - Era Vargas.html";
@@ -686,4 +262,3 @@
 </body>
 
 </html>
-

@@ -194,61 +194,64 @@
     <!-- Script de Gestão dos Temas e Interatividade -->
     <script>
                         const topics = [
-    { name: "Antiguidade Oriental", file: "01 - Antiguidade oriental.html", category: "Antiguidade", videoUrl: "https://www.youtube.com/embed/PSMQHAvlIig" },
-    { name: "Egito", file: "02 - Egito.html", category: "Antiguidade", videoUrl: "https://www.youtube.com/embed/SIxnb-pQ7s4" },
-    { name: "Mesopotâmia", file: "03 - mesopotamia.html", category: "Antiguidade", videoUrl: "https://youtube.com/embed/qh7CKGQvTwY?" },
-    { name: "Fenícia", file: "04 - fenicia.html", category: "Antiguidade", videoUrl: "https://youtube.com/embed/Q80f0jDPQo8?" },
-    { name: "Grécia", file: "05 - grécia.html", category: "Antiguidade", videoUrl: "https://www.youtube.com/embed/qIvJPvfUQnU" },
-    { name: "Roma", file: "06 - Roma.html", category: "Antiguidade", videoUrl: "https://www.youtube.com/embed/Of2hobRWWV4" },
-    { name: "Império Bizantino", file: "07 - imperio-bizantino.html", category: "Idade Média", videoUrl: "https://youtube.com/embed/gcqT7DtSzEI?" },
-    { name: "Mundo Árabe", file: "08 - mundo-Arabe.html", category: "Idade Média", videoUrl: "https://youtube.com/embed/VkYA-jZTyLk?" },
-    { name: "Império Carolíngio", file: "09 - Imperio-Carolingio.html", category: "Idade Média", videoUrl: "https://youtube.com/embed/7XhF7lzh2fQ?" },
-    { name: "Feudalismo", file: "10 - feudalismo.html", category: "Idade Média", videoUrl: "https://youtube.com/embed/HihjI7ceC6E?" },
-    { name: "Igreja na Idade Média", file: "11 - Igreja-na-Idade-Media.html", category: "Idade Média", videoUrl: "https://youtube.com/embed/83CBEL2hQCM?" },
-    { name: "Questão das Investiduras", file: "12 - Questao-das-Investiduras.html", category: "Idade Média", videoUrl: "https://www.youtube.com/embed/EUacQKGXQkc" },
-    { name: "As Cruzadas", file: "13 - as-cruzadas.html", category: "Idade Média", videoUrl: "https://youtube.com/embed/QW9PyBTbImY?" },
-    { name: "Renascimento Comercial Urbano", file: "14 - Renascimento-Comercial-Urbano.html", category: "Idade Média", videoUrl: "https://youtube.com/embed/kP7jFUwYc1g?" },
-    { name: "Baixa Idade Média", file: "15 - baixa -idade-média.html", category: "Idade Média", videoUrl: "https://youtube.com/embed/lKXqCqV0yGs?" },
-    { name: "Formação Monarquias Nacionais", file: "16 - Formacao-Monarquias-Nacionais.html", category: "Idade Moderna", videoUrl: "https://youtube.com/embed/cqZM7_UB6t4?" },
-    { name: "A Crise do Século XIV", file: "17 - Crise do Século XIV.html", category: "Idade Média", videoUrl: "https://www.youtube.com/embed/pdKNGXmgn24" },
-    { name: "Expansão Marítimo-Comercial", file: "18 - EXPANSÃO MARÍTIMO-COMERCIAL.html", category: "Idade Moderna", videoUrl: "https://youtube.com/embed/9SUD3BOLllE?" },
-    { name: "Reforma", file: "19 - Reformas.html", category: "Idade Moderna", videoUrl: "https://www.youtube.com/embed/S1Qavhhspgg" },
-    { name: "Mercantilismo", file: "20 - Mercantilismo.html", category: "Idade Moderna", videoUrl: "https://youtube.com/embed/F5sl0kfxzN4?" },
-    { name: "Absolutismo", file: "21 - Absolutismo.html", category: "Idade Moderna", videoUrl: "https://youtube.com/embed/5fSv6xw1_fE?" },
-    { name: "Revoluções Inglesas do Século XVII", file: "22 - REVOLUÇÕES INGLESAS DO SÉCULO XVII.html", category: "Idade Moderna", videoUrl: "https://www.youtube.com/embed/3HUGFC-3esw" },
-    { name: "Iluminismo e Despotismo Esclarecido", file: "23 - ILUMINISMO E DESPOTISMO ESCLARECIDO.html", category: "Idade Moderna", videoUrl: "https://www.youtube.com/embed/KQRIEGG-2oA" },
-    { name: "Montagem do Sistema Colonial", file: "24 - MONTAGEM DO SISTEMA COLONIAL.html", category: "Brasil Colonial", videoUrl: "https://youtube.com/embed/JJlob0qA1kY?" },
-    { name: "Montagem da Administração Colonial", file: "25 - Montagem-da-Administracao-Colonial.html", category: "Brasil Colonial", videoUrl: "https://youtube.com/embed/ZUfGYTOrLrw?" },
-    { name: "Sistema Colonial", file: "26 - Sistema-Colonial.html", category: "Brasil Colonial", videoUrl: "https://www.youtube.com/embed/IIReUDezw-E" },
-    { name: "A Crise do Sistema Colonial", file: "27 - A-Crise-do-Sistema-Colonial.html", category: "Brasil Colonial", videoUrl: "https://www.youtube.com/embed/x_QEuUqjuYY" },
-    { name: "Primeira Revolução Industrial", file: "28 - PRIMEIRA REVOLUÇÃO INDUSTRIAL.html", category: "Idade Contemporânea", videoUrl: "https://www.youtube.com/embed/4YK13SK5zzc" },
-    { name: "Independência dos Estados Unidos", file: "29 - Independencia-dos-Estados-Unidos.html", category: "América", videoUrl: "https://www.youtube.com/embed/rcN29xzIltA" },
-    { name: "Revolução Francesa", file: "30 - Revolucao-Francesa.html", category: "Idade Contemporânea", videoUrl: "https://www.youtube.com/embed/_46qYt8cETc" },
-    { name: "Era Napoleônica", file: "31 - Era-Napoleonica.html", category: "Idade Contemporânea", videoUrl: "https://www.youtube.com/embed/ibq9Clf_Kpk" },
-    { name: "Brasil Joanino", file: "32 - Brasil-Joanino.html", category: "Brasil Império", videoUrl: "https://www.youtube.com/embed/7ES7XZUflrQ" },
-    { name: "A Independência da América Espanhola", file: "33 - A Independência da América Espanhola.html", category: "América", videoUrl: "https://www.youtube.com/embed/uPWJWzpJvu4" },
-    { name: "Congresso de Viena", file: "34 - Congresso-de-Viena.html", category: "Século XIX", videoUrl: "https://www.youtube.com/embed/8-3Nit8lsKc" },
-    { name: "Processo de Independência", file: "35 - Processo-de-Independencia.html", category: "Brasil Império", videoUrl: "https://www.youtube.com/embed/lz5gvFmmPxE" },
-    { name: "Primeiro Reinado", file: "36 - Primeiro Reinado.html", category: "Brasil Império", videoUrl: "https://www.youtube.com/embed/X-V3Wiquu0M" },
-    { name: "Período Regencial", file: "37 - Período Regencial.html", category: "Brasil Império", videoUrl: "https://www.youtube.com/embed/dIDLmZd3wEU" },
-    { name: "Segundo Reinado", file: "38 - Segundo Reinado.html", category: "Brasil Império", videoUrl: "https://www.youtube.com/embed/xyXD-EIzX68" },
-    { name: "O Advento da República", file: "39 - O Advento da República.html", category: "Brasil República", videoUrl: "https://www.youtube.com/embed/T2gMKpADSQU" },
-    { name: "República Velha — Parte 1", file: "40 - República Velha - Parte 1.html", category: "Brasil República", videoUrl: "https://www.youtube.com/embed/q1knhnv_1pY" },
-    { name: "República Velha — Parte 2", file: "41 - República Velha - Parte 2.html", category: "Brasil República", videoUrl: "https://www.youtube.com/embed/zFQUZVhDg_I" },
-    { name: "Era Vargas", file: "42 - Era Vargas.html", category: "Brasil República", videoUrl: "https://www.youtube.com/embed/TiJBt5RrA-E" },
-    { name: "República Liberal Populista", file: "43 - República Liberal Populista.html", category: "Brasil República", videoUrl: "https://www.youtube.com/embed/G9ub4tL2HOM" },
-    { name: "Revoluções Liberais", file: "44 - Revoluções Liberais.html", category: "Século XIX", videoUrl: "https://www.youtube.com/embed/2989DknP4sw" },
-    { name: "Ocupação e Expansão Territoriais", file: "45 - OCUPAÇÃO E EXPANSÃO TERRITORIAIS.html", category: "Brasil Império", videoUrl: "https://www.youtube.com/embed/_fyQjzR6Sm0" },
-    { name: "A Guerra de Secessão", file: "46 - A Guerra de Secessão.html", category: "América", videoUrl: "https://www.youtube.com/embed/o_RaT6l4Heg" },
-    { name: "Unificações Alemã e Italiana", file: "47 - Unificações Alemã e Italiana.html", category: "Século XIX", videoUrl: "https://youtube.com/embed/R-qSg-nxvbY?" },
-    { name: "A Segunda Revolução Industrial, Neocolonismo", file: "48 - A Segunda Revolução Industrial, Neocolonialismo e Imperialismo.html", category: "Idade Contemporânea", videoUrl: "https://www.youtube.com/embed/tGsIuYPGl5s" },
-    { name: "A Primeira Guerra Mundial", file: "49 - A PRIMEIRA GUERRA MUNDIAL.html", category: "Século XX", videoUrl: "https://www.youtube.com/embed/ZfZAle8CVgg" },
-    { name: "Revolução Russa", file: "50 - REVOLUÇÃO RUSSA.html", category: "Século XX", videoUrl: "https://www.youtube.com/embed/XpxprM5lcm0" },
-    { name: "A Crise de 1929", file: "51 - A CRISE DE 1929.html", category: "Século XX", videoUrl: "https://www.youtube.com/embed/Hnw8qSCrBmE" },
-    { name: "O Nazi-Fascismo", file: "52 - O NAZI-FASCISMO.html", category: "Século XX", videoUrl: "https://www.youtube.com/embed/9XFK65d6xYI" },
-    { name: "Segunda Guerra Mundial", file: "53 - Segunda-Guerra-Mundial.html", category: "Século XX", videoUrl: "https://youtube.com/embed/ZffDTZTmLGI?" },
-    { name: "Descolonização", file: "54 - DESCOLONIZAÇÃO.html", category: "Século XX", videoUrl: "https://youtube.com/embed/ghOnbO0z3gA?" },
-    { name: "Guerra Fria", file: "55 - GUERRA FRIA.html", category: "Século XX", videoUrl: "https://youtube.com/embed/6QOkLu4kOOI?" }
+    { name: "Antiguidade Oriental", file: "01 - Antiguidade oriental.html", level: "6º ano - Ensino Fundamental", category: "Antiguidade", videoUrl: "https://www.youtube.com/embed/PSMQHAvlIig" },
+    { name: "Egito", file: "02 - Egito.html", level: "6º ano - Ensino Fundamental", category: "Antiguidade", videoUrl: "https://www.youtube.com/embed/SIxnb-pQ7s4" },
+    { name: "Mesopotâmia", file: "03 - mesopotamia.html", level: "6º ano - Ensino Fundamental", category: "Antiguidade", videoUrl: "https://youtube.com/embed/qh7CKGQvTwY?" },
+    { name: "Fenícia", file: "04 - fenicia.html", level: "6º ano - Ensino Fundamental", category: "Antiguidade", videoUrl: "https://youtube.com/embed/Q80f0jDPQo8?" },
+    { name: "Grécia", file: "05 - grécia.html", level: "6º ano - Ensino Fundamental", category: "Antiguidade", videoUrl: "https://www.youtube.com/embed/qIvJPvfUQnU" },
+    { name: "Roma", file: "06 - Roma.html", level: "6º ano - Ensino Fundamental", category: "Antiguidade", videoUrl: "https://www.youtube.com/embed/Of2hobRWWV4" },
+    { name: "Império Bizantino", file: "07 - imperio-bizantino.html", level: "7º ano - Ensino Fundamental", category: "Idade Média", videoUrl: "https://youtube.com/embed/gcqT7DtSzEI?" },
+    { name: "Mundo Árabe", file: "08 - mundo-Arabe.html", level: "7º ano - Ensino Fundamental", category: "Idade Média", videoUrl: "https://youtube.com/embed/VkYA-jZTyLk?" },
+    { name: "Império Carolíngio", file: "09 - Imperio-Carolingio.html", level: "7º ano - Ensino Fundamental", category: "Idade Média", videoUrl: "https://youtube.com/embed/7XhF7lzh2fQ?" },
+    { name: "Feudalismo", file: "10 - feudalismo.html", level: "7º ano - Ensino Fundamental", category: "Idade Média", videoUrl: "https://youtube.com/embed/HihjI7ceC6E?" },
+    { name: "Igreja na Idade Média", file: "11 - Igreja-na-Idade-Media.html", level: "7º ano - Ensino Fundamental", category: "Idade Média", videoUrl: "https://youtube.com/embed/83CBEL2hQCM?" },
+    { name: "Questão das Investiduras", file: "12 - Questao-das-Investiduras.html", level: "7º ano - Ensino Fundamental", category: "Idade Média", videoUrl: "https://www.youtube.com/embed/EUacQKGXQkc" },
+    { name: "As Cruzadas", file: "13 - as-cruzadas.html", level: "7º ano - Ensino Fundamental", category: "Idade Média", videoUrl: "https://youtube.com/embed/QW9PyBTbImY?" },
+    { name: "Renascimento Comercial Urbano", file: "14 - Renascimento-Comercial-Urbano.html", level: "7º ano - Ensino Fundamental", category: "Idade Média", videoUrl: "https://youtube.com/embed/kP7jFUwYc1g?" },
+    { name: "Baixa Idade Média", file: "15 - baixa -idade-média.html", level: "7º ano - Ensino Fundamental", category: "Idade Média", videoUrl: "https://youtube.com/embed/lKXqCqV0yGs?" },
+    { name: "Formação Monarquias Nacionais", file: "16 - Formacao-Monarquias-Nacionais.html", level: "8º ano - Ensino Fundamental", category: "Idade Moderna", videoUrl: "https://youtube.com/embed/cqZM7_UB6t4?" },
+    { name: "A Crise do Século XIV", file: "17 - Crise do Século XIV.html", level: "8º ano - Ensino Fundamental", category: "Idade Média", videoUrl: "https://www.youtube.com/embed/pdKNGXmgn24" },
+    { name: "Expansão Marítimo-Comercial", file: "18 - EXPANSÃO MARÍTIMO-COMERCIAL.html", level: "8º ano - Ensino Fundamental", category: "Idade Moderna", videoUrl: "https://youtube.com/embed/9SUD3BOLllE?" },
+    { name: "Reforma", file: "19 - Reformas.html", level: "8º ano - Ensino Fundamental", category: "Idade Moderna", videoUrl: "https://www.youtube.com/embed/S1Qavhhspgg" },
+    { name: "Mercantilismo", file: "20 - Mercantilismo.html", level: "8º ano - Ensino Fundamental", category: "Idade Moderna", videoUrl: "https://youtube.com/embed/F5sl0kfxzN4?" },
+    { name: "Absolutismo", file: "21 - Absolutismo.html", level: "8º ano - Ensino Fundamental", category: "Idade Moderna", videoUrl: "https://youtube.com/embed/5fSv6xw1_fE?" },
+    { name: "Revoluções Inglesas do Século XVII", file: "22 - REVOLUÇÕES INGLESAS DO SÉCULO XVII.html", level: "8º ano - Ensino Fundamental", category: "Idade Moderna", videoUrl: "https://www.youtube.com/embed/3HUGFC-3esw" },
+    { name: "Iluminismo e Despotismo Esclarecido", file: "23 - ILUMINISMO E DESPOTISMO ESCLARECIDO.html", level: "8º ano - Ensino Fundamental", category: "Idade Moderna", videoUrl: "https://www.youtube.com/embed/KQRIEGG-2oA" },
+    { name: "Montagem do Sistema Colonial", file: "24 - MONTAGEM DO SISTEMA COLONIAL.html", level: "8º ano - Ensino Fundamental", category: "Brasil Colonial", videoUrl: "https://youtube.com/embed/JJlob0qA1kY?" },
+    { name: "Montagem da Administração Colonial", file: "25 - Montagem-da-Administracao-Colonial.html", level: "8º ano - Ensino Fundamental", category: "Brasil Colonial", videoUrl: "https://youtube.com/embed/ZUfGYTOrLrw?" },
+    { name: "Sistema Colonial", file: "26 - Sistema-Colonial.html", level: "8º ano - Ensino Fundamental", category: "Brasil Colonial", videoUrl: "https://www.youtube.com/embed/IIReUDezw-E" },
+    { name: "A Crise do Sistema Colonial", file: "27 - A-Crise-do-Sistema-Colonial.html", level: "8º ano - Ensino Fundamental", category: "Brasil Colonial", videoUrl: "https://www.youtube.com/embed/x_QEuUqjuYY" },
+    { name: "Primeira Revolução Industrial", file: "28 - PRIMEIRA REVOLUÇÃO INDUSTRIAL.html", level: "9º ano - Ensino Fundamental", category: "Idade Contemporânea", videoUrl: "https://www.youtube.com/embed/4YK13SK5zzc" },
+    { name: "Independência dos Estados Unidos", file: "29 - Independencia-dos-Estados-Unidos.html", level: "9º ano - Ensino Fundamental", category: "América", videoUrl: "https://www.youtube.com/embed/rcN29xzIltA" },
+    { name: "Revolução Francesa", file: "30 - Revolucao-Francesa.html", level: "9º ano - Ensino Fundamental", category: "Idade Contemporânea", videoUrl: "https://www.youtube.com/embed/_46qYt8cETc" },
+    { name: "Era Napoleônica", file: "31 - Era-Napoleonica.html", level: "9º ano - Ensino Fundamental", category: "Idade Contemporânea", videoUrl: "https://www.youtube.com/embed/ibq9Clf_Kpk" },
+    { name: "Brasil Joanino", file: "32 - Brasil-Joanino.html", level: "9º ano - Ensino Fundamental", category: "Brasil Império", videoUrl: "https://www.youtube.com/embed/7ES7XZUflrQ" },
+    { name: "A Independência da América Espanhola", file: "33 - A Independência da América Espanhola.html", level: "9º ano - Ensino Fundamental", category: "América", videoUrl: "https://www.youtube.com/embed/uPWJWzpJvu4" },
+    { name: "Congresso de Viena", file: "34 - Congresso-de-Viena.html", level: "9º ano - Ensino Fundamental", category: "Século XIX", videoUrl: "https://www.youtube.com/embed/8-3Nit8lsKc" },
+    { name: "Processo de Independência", file: "35 - Processo-de-Independencia.html", level: "9º ano - Ensino Fundamental", category: "Brasil Império", videoUrl: "https://www.youtube.com/embed/lz5gvFmmPxE" },
+    { name: "Primeiro Reinado", file: "36 - Primeiro Reinado.html", level: "9º ano - Ensino Fundamental", category: "Brasil Império", videoUrl: "https://www.youtube.com/embed/X-V3Wiquu0M" },
+    { name: "Período Regencial", file: "37 - Período Regencial.html", level: "9º ano - Ensino Fundamental", category: "Brasil Império", videoUrl: "https://www.youtube.com/embed/dIDLmZd3wEU" },
+    { name: "Segundo Reinado", file: "38 - Segundo Reinado.html", level: "9º ano - Ensino Fundamental", category: "Brasil Império", videoUrl: "https://www.youtube.com/embed/xyXD-EIzX68" },
+    { name: "O Advento da República", file: "39 - O Advento da República.html", level: "9º ano - Ensino Fundamental", category: "Brasil República", videoUrl: "https://www.youtube.com/embed/T2gMKpADSQU" },
+    { name: "República Velha — Parte 1", file: "40 - República Velha - Parte 1.html", level: "9º ano - Ensino Fundamental", category: "Brasil República", videoUrl: "https://www.youtube.com/embed/q1knhnv_1pY" },
+    { name: "República Velha — Parte 2", file: "41 - República Velha - Parte 2.html", level: "9º ano - Ensino Fundamental", category: "Brasil República", videoUrl: "https://www.youtube.com/embed/zFQUZVhDg_I" },
+    { name: "Era Vargas", file: "42 - Era Vargas.html", level: "9º ano - Ensino Fundamental", category: "Brasil República", videoUrl: "https://www.youtube.com/embed/TiJBt5RrA-E" },
+    { name: "República Liberal Populista", file: "43 - República Liberal Populista.html", level: "9º ano - Ensino Fundamental", category: "Brasil República", videoUrl: "https://www.youtube.com/embed/G9ub4tL2HOM" },
+    { name: "Revoluções Liberais", file: "44 - Revoluções Liberais.html", level: "9º ano - Ensino Fundamental", category: "Século XIX", videoUrl: "https://www.youtube.com/embed/2989DknP4sw" },
+    { name: "Ocupação e Expansão Territoriais", file: "45 - OCUPAÇÃO E EXPANSÃO TERRITORIAIS.html", level: "9º ano - Ensino Fundamental", category: "Brasil Império", videoUrl: "https://www.youtube.com/embed/_fyQjzR6Sm0" },
+    { name: "A Guerra de Secessão", file: "46 - A Guerra de Secessão.html", level: "9º ano - Ensino Fundamental", category: "América", videoUrl: "https://www.youtube.com/embed/o_RaT6l4Heg" },
+    { name: "Unificações Alemã e Italiana", file: "47 - Unificações Alemã e Italiana.html", level: "9º ano - Ensino Fundamental", category: "Século XIX", videoUrl: "https://youtube.com/embed/R-qSg-nxvbY?" },
+    { name: "A Segunda Revolução Industrial, Neocolonismo", file: "48 - A Segunda Revolução Industrial, Neocolonialismo e Imperialismo.html", level: "9º ano - Ensino Fundamental", category: "Idade Contemporânea", videoUrl: "https://www.youtube.com/embed/tGsIuYPGl5s" },
+    { name: "A Primeira Guerra Mundial", file: "49 - A PRIMEIRA GUERRA MUNDIAL.html", level: "1º ano - Ensino Médio", category: "Século XX", videoUrl: "https://www.youtube.com/embed/ZfZAle8CVgg" },
+    { name: "Revolução Russa", file: "50 - REVOLUÇÃO RUSSA.html", level: "1º ano - Ensino Médio", category: "Século XX", videoUrl: "https://www.youtube.com/embed/XpxprM5lcm0" },
+    { name: "A Crise de 1929", file: "51 - A CRISE DE 1929.html", level: "1º ano - Ensino Médio", category: "Século XX", videoUrl: "https://www.youtube.com/embed/Hnw8qSCrBmE" },
+    { name: "O Nazi-Fascismo", file: "52 - O NAZI-FASCISMO.html", level: "1º ano - Ensino Médio", category: "Século XX", videoUrl: "https://www.youtube.com/embed/9XFK65d6xYI" },
+    { name: "Segunda Guerra Mundial", file: "53 - Segunda-Guerra-Mundial.html", level: "1º ano - Ensino Médio", category: "Século XX", videoUrl: "https://youtube.com/embed/ZffDTZTmLGI?" },
+    { name: "Descolonização", file: "54 - DESCOLONIZAÇÃO.html", level: "2º ano - Ensino Médio", category: "Século XX", videoUrl: "https://youtube.com/embed/ghOnbO0z3gA?" },
+    { name: "Guerra Fria", file: "55 - GUERRA FRIA.html", level: "2º ano - Ensino Médio", category: "Século XX", videoUrl: "https://youtube.com/embed/6QOkLu4kOOI?" },
+    { name: "A Ditadura Militar (1964-1985)", file: "56 - Ditadura Militar (1964-1985).html", level: "3º ano - Ensino Médio", category: "Brasil República", videoUrl: "https://www.youtube.com/embed/jG1jUGbN9i0" },
+    { name: "Redemocratização e Constituição de 1988", file: "57 - Redemocratização e Constituição de 1988.html", level: "3º ano - Ensino Médio", category: "Brasil República", videoUrl: "https://www.youtube.com/embed/jG1jUGbN9i0" },
+    { name: "Nova República e Desafios Contemporâneos", file: "58 - Nova República e Desafios Contemporâneos.html", level: "3º ano - Ensino Médio", category: "Brasil República", videoUrl: "https://www.youtube.com/embed/TiJBt5RrA-E" }
 ];
         const grid = document.getElementById('topicsGrid');
         const searchInput = document.getElementById('searchInput');
@@ -266,37 +269,60 @@
                 noResults.classList.add('hidden');
             }
 
-            list.forEach((topic, index) => {
-                const card = document.createElement('div');
-                card.className = "bg-history-card border border-history-border rounded-2xl p-6 flex flex-col justify-between hover:border-amber-500/50 hover:shadow-xl hover:shadow-amber-500/5 transition-all duration-300 group";
+            var groups = {};
+            list.forEach(function(topic) {
+                var lv = topic.level || 'Sem Nível';
+                if (!groups[lv]) groups[lv] = [];
+                groups[lv].push(topic);
+            });
 
-                card.innerHTML = `
-                    <div>
-                        <div class="flex justify-between items-start mb-4">
-                            <span class="text-xs font-semibold px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-400 border border-amber-500/20">
-                                ${topic.category}
-                            </span>
-                            <span class="text-xs font-mono text-slate-500">#${index + 1}</span>
+            var order = [
+                '6º ano - Ensino Fundamental',
+                '7º ano - Ensino Fundamental',
+                '8º ano - Ensino Fundamental',
+                '9º ano - Ensino Fundamental',
+                '1º ano - Ensino Médio',
+                '2º ano - Ensino Médio',
+                '3º ano - Ensino Médio'
+            ];
+
+            order.forEach(function(lv) {
+                if (!groups[lv]) return;
+                var header = document.createElement('h3');
+                header.className = "col-span-full text-xl font-bold text-amber-500 mt-8 mb-4 title-font border-b border-history-border pb-2";
+                header.textContent = lv;
+                grid.appendChild(header);
+                groups[lv].forEach(function(topic, index) {
+                    var card = document.createElement('div');
+                    card.className = "bg-history-card border border-history-border rounded-2xl p-6 flex flex-col justify-between hover:border-amber-500/50 hover:shadow-xl hover:shadow-amber-500/5 transition-all duration-300 group";
+                    card.innerHTML = `
+                        <div>
+                            <div class="flex justify-between items-start mb-4">
+                                <span class="text-xs font-semibold px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                                    ${topic.category}
+                                </span>
+                                <span class="text-xs font-mono text-slate-500">#${index + 1}</span>
+                            </div>
+                            <h4 class="title-font text-lg font-bold text-white group-hover:text-amber-400 transition-colors mb-2">
+                                ${topic.name}
+                            </h4>
+                            <p class="text-xs text-slate-400 mb-6 flex items-center gap-1.5 font-mono">
+                                <i class="fa-solid fa-code text-slate-500"></i> ${topic.file}
+                            </p>
                         </div>
-                        <h4 class="title-font text-lg font-bold text-white group-hover:text-amber-400 transition-colors mb-2">
-                            ${topic.name}
-                        </h4>
-                        <p class="text-xs text-slate-400 mb-6 flex items-center gap-1.5 font-mono">
-                            <i class="fa-solid fa-code text-slate-500"></i> ${topic.file}
-                        </p>
-                    </div>
-                    <div class="pt-4 border-t border-history-border flex items-center justify-between gap-3">
-                        <button onclick="openModal('${topic.name.replace(/'/g, "\\'")}', '${topic.file}', '${topic.videoUrl}')" 
-                            class="flex-1 bg-amber-600/10 hover:bg-amber-600 text-amber-400 hover:text-white border border-amber-600/30 hover:border-transparent text-xs font-semibold py-2.5 px-3 rounded-xl transition-all flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-play"></i> Assistir Vídeo / Aula
-                        </button>
-                        <a href="${topic.file}" target="_blank" 
-                            class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs py-2.5 px-3 rounded-xl transition-colors border border-history-border flex items-center justify-center" title="Abrir Arquivo HTML">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </a>
-                    </div>
-                `;
-                grid.appendChild(card);
+                        <div class="pt-4 border-t border-history-border flex items-center justify-between gap-3">
+                            <button onclick="openModal('${topic.name.replace(/'/g, "\\'")}', '${topic.file}', '${topic.videoUrl}')" 
+                                class="flex-1 bg-amber-600/10 hover:bg-amber-600 text-amber-400 hover:text-white border border-amber-600/30 hover:border-transparent text-xs font-semibold py-2.5 px-3 rounded-xl transition-all flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-play"></i> Assistir Vídeo / Aula
+                            </button>
+                            <a href="${topic.file}" target="_blank" 
+                                class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs py-2.5 px-3 rounded-xl transition-colors border border-history-border flex items-center justify-center" title="Abrir Arquivo HTML">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                });
             });
         }
 
