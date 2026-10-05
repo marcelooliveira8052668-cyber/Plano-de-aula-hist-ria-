@@ -193,63 +193,62 @@
 
     <!-- Script de Gestão dos Temas e Interatividade -->
     <script>
-        const topics = [
-    // --- ANTIGUIDADE ---
-    { name: "Antiguidade Oriental", file: "Antiguidade oriental.html", category: "Antiguidade", videoUrl: "https://www.youtube.com/embed/PSMQHAvlIig" },
-    { name: "Mesopotâmia", file: "mesopotamia.html", category: "Antiguidade", videoUrl: "https://youtube.com/embed/qh7CKGQvTwY?" },
-    { name: "Egito", file: "Egito.html", category: "Antiguidade", videoUrl: "https://www.youtube.com/embed/SIxnb-pQ7s4" },
-    { name: "Fenícia", file: "fenicia.html", category: "Antiguidade", videoUrl: "https://youtube.com/embed/Q80f0jDPQo8?" },
-    { name: "Grécia", file: "Grécia.html", category: "Antiguidade", videoUrl: "https://www.youtube.com/embed/qIvJPvfUQnU" },
-    { name: "Roma", file: "Roma.html", category: "Antiguidade", videoUrl: "https://www.youtube.com/embed/Of2hobRWWV4" },
-
-    // --- IDADE MÉDIA ---
-    { name: "Império Bizantino", file: "imperio-bizantino.html", category: "Idade Média", videoUrl: "https://youtube.com/embed/gcqT7DtSzEI?" },
-    { name: "Mundo Árabe", file: "mundo-Arabe.html", category: "Idade Média", videoUrl: "https://youtube.com/embed/VkYA-jZTyLk?" },
-    { name: "Império Carolíngio", file: "Imperio-Carolingio.html", category: "Idade Média", videoUrl: "https://youtube.com/embed/7XhF7lzh2fQ?" },
-    { name: "Feudalismo", file: "feudalismo.html", category: "Idade Média", videoUrl: "https://youtube.com/embed/HihjI7ceC6E?" },
-    { name: "Igreja na Idade Média", file: "Igreja-na-Idade-Media.html", category: "Idade Média", videoUrl: "https://youtube.com/embed/83CBEL2hQCM?" },
-    { name: "As Cruzadas", file: "as-cruzadas.html", category: "Idade Média", videoUrl: "https://youtube.com/embed/QW9PyBTbImY?" },
-    { name: "Renascimento Comercial Urbano", file: "Renascimento-Comercial-Urbano.html", category: "Idade Média", videoUrl: "https://youtube.com/embed/kP7jFUwYc1g?" },
-    { name: "Baixa Idade Média", file: "baixa -idade-média.html", category: "Idade Média", videoUrl: "https://youtube.com/embed/lKXqCqV0yGs?" },
-    { name: "Questão das Investiduras", file: "Questao-das-Investiduras.html", category: "Idade Média", videoUrl: "https://www.youtube.com/embed/EUacQKGXQkc" },
-
-    // --- IDADE MODERNA & BRASIL COLONIAL ---
-    { name: "Formação Monarquias Nacionais", file: "Formacao-Monarquias-Nacionais.html", category: "Idade Moderna", videoUrl: "https://youtube.com/embed/cqZM7_UB6t4?" },
-    { name: "Absolutismo", file: "Absolutismo.html", category: "Idade Moderna", videoUrl: "https://youtube.com/embed/5fSv6xw1_fE?" },
-    { name: "Mercantilismo", file: "Mercantilismo.html", category: "Idade Moderna", videoUrl: "https://youtube.com/embed/F5sl0kfxzN4?" },
-    { name: "Expansão Marítimo-Comercial", file: "EXPANSÃO MARÍTIMO-COMERCIAL.html", category: "Idade Moderna", videoUrl: "https://youtube.com/embed/9SUD3BOLllE?" },
-    
-    { name: "Montagem do Sistema Colonial", file: "MONTAGEM DO SISTEMA COLONIAL.html", category: "Brasil Colonial", videoUrl: "https://youtube.com/embed/JJlob0qA1kY?" },
-    { name: "Montagem da Administração Colonial", file: "Montagem-da-Administracao-Colonial.html", category: "Brasil Colonial", videoUrl: "https://youtube.com/embed/ZUfGYTOrLrw?" },
-    { name: "Sistema Colonial", file: "Sistema-Colonial.html", category: "Brasil Colonial", videoUrl: "https://www.youtube.com/embed/IIReUDezw-E" },
-    { name: "Reforma", file: "Reformas.html", category: "Idade Moderna", videoUrl: "https://www.youtube.com/embed/S1Qavhhspgg" },
-    { name: "Revoluções Inglesas do Século XVII", file: "REVOLUÇÕES INGLESAS DO SÉCULO XVII.html", category: "Idade Moderna", videoUrl: "https://www.youtube.com/embed/3HUGFC-3esw" },
-    { name: "Iluminismo e Despotismo Esclarecido", file: "ILUMINISMO E DESPOTISMO ESCLARECID.html", category: "Idade Moderna", videoUrl: "https://www.youtube.com/embed/KQRIEGG-2oA" },
-    { name: "A Crise do Sistema Colonial", file: "A-Crise-do-Sistema-Colonial.html", category: "Brasil Colonial", videoUrl: "https://www.youtube.com/embed/x_QEuUqjuYY" },
-
-    // --- IDADE CONTEMPORÂNEA, AMÉRICA & BRASIL IMPÉRIO ---
-    { name: "Independência dos Estados Unidos", file: "Independencia-dos-Estados-Unidos.html", category: "América", videoUrl: "https://www.youtube.com/embed/rcN29xzIltA" },
-    { name: "Revolução Francesa", file: "Revolucao-Francesa.html", category: "Idade Contemporânea", videoUrl: "https://www.youtube.com/embed/_46qYt8cETc" },
-    { name: "Era Napoleônica", file: "Era-Napoleonica.html", category: "Idade Contemporânea", videoUrl: "https://www.youtube.com/embed/ibq9Clf_Kpk" },
-    { name: "Congresso de Viena", file: "Congresso-de-Viena.html", category: "Século XIX", videoUrl: "https://www.youtube.com/embed/8-3Nit8lsKc" },
-    { name: "Revoluções Liberais", file: "Revolucoes-Liberais.html", category: "Século XIX", videoUrl: "https://www.youtube.com/embed/2989DknP4sw" },
-    { name: "A Independência da América Espanhola", file: "A Independência da América Espanhola.html", category: "América", videoUrl: "https://www.youtube.com/embed/uPWJWzpJvu4" },
-    { name: "Brasil Joanino", file: "Brasil-Joanino.html", category: "Brasil Império", videoUrl: "https://www.youtube.com/embed/7ES7XZUflrQ" },
-    { name: "Processo de Independência", file: "Processo-de-Independencia.html", category: "Brasil Império", videoUrl: "https://www.youtube.com/embed/lz5gvFmmPxE" },
-    { name: "Primeira Revolução Industrial", file: "PRIMEIRA REVOLUÇÃO INDUSTRIAL.html", category: "Idade Contemporânea", videoUrl: "https://www.youtube.com/embed/4YK13SK5zzc" },
-    { name: "A Guerra de Secessão", file: "A Guerra de Secessão.html", category: "América", videoUrl: "https://www.youtube.com/embed/o_RaT6l4Heg" },
-    { name: "Ocupação e Expansão Territoriais", file: "OCUPAÇÃO E EXPANSÃO TERRITORIAIS.html", category: "Brasil Império", videoUrl: "https://www.youtube.com/embed/_fyQjzR6Sm0" },
-    { name: "Unificações Alemã e Italiana", file: "Unificações Alemã e Italiana.html", category: "Século XIX", videoUrl: "https://youtube.com/embed/R-qSg-nxvbY?" },
-    { name: "A Segunda Revolução Industrial, Neocolonismo", file: "A Segunda Revolução Industrial, Neocolonismo.html", category: "Idade Contemporânea", videoUrl: "https://www.youtube.com/embed/tGsIuYPGl5s" },
-
-    // --- SÉCULO XX ---
-    { name: "Revolução Russa", file: "REVOLUÇÃO RUSSA.html", category: "Século XX", videoUrl: "https://www.youtube.com/embed/XpxprM5lcm0" },
-    { name: "A Primeira Guerra Mundial", file: "A PRIMEIRA GUERRA MUNDIAL.html", category: "Século XX", videoUrl: "https://www.youtube.com/embed/ZfZAle8CVgg" },
-    { name: "A Crise de 1929", file: "A CRISE DE 1929.html", category: "Século XX", videoUrl: "https://www.youtube.com/embed/Hnw8qSCrBmE" },
-    { name: "O Nazi-Fascismo", file: "O NAZI-FASCISMO.html", category: "Século XX", videoUrl: "https://www.youtube.com/embed/9XFK65d6xYI" },
-    { name: "Segunda Guerra Mundial", file: "Segunda-Guerra-Mundialhtml.html", category: "Século XX", videoUrl: "https://youtube.com/embed/ZffDTZTmLGI?" },
-    { name: "Guerra Fria", file: "GUERRA FRIA.html", category: "Século XX", videoUrl: "https://youtube.com/embed/6QOkLu4kOOI?" },
-    { name: "Descolonização", file: "DESCOLONIZAÇÃO.html", category: "Século XX", videoUrl: "https://youtube.com/embed/ghOnbO0z3gA?" }
+                        const topics = [
+    { name: "Antiguidade Oriental", file: "01 - Antiguidade oriental.html", category: "Antiguidade", videoUrl: "https://www.youtube.com/embed/PSMQHAvlIig" },
+    { name: "Egito", file: "02 - Egito.html", category: "Antiguidade", videoUrl: "https://www.youtube.com/embed/SIxnb-pQ7s4" },
+    { name: "Mesopotâmia", file: "03 - mesopotamia.html", category: "Antiguidade", videoUrl: "https://youtube.com/embed/qh7CKGQvTwY?" },
+    { name: "Fenícia", file: "04 - fenicia.html", category: "Antiguidade", videoUrl: "https://youtube.com/embed/Q80f0jDPQo8?" },
+    { name: "Grécia", file: "05 - grécia.html", category: "Antiguidade", videoUrl: "https://www.youtube.com/embed/qIvJPvfUQnU" },
+    { name: "Roma", file: "06 - Roma.html", category: "Antiguidade", videoUrl: "https://www.youtube.com/embed/Of2hobRWWV4" },
+    { name: "Império Bizantino", file: "07 - imperio-bizantino.html", category: "Idade Média", videoUrl: "https://youtube.com/embed/gcqT7DtSzEI?" },
+    { name: "Mundo Árabe", file: "08 - mundo-Arabe.html", category: "Idade Média", videoUrl: "https://youtube.com/embed/VkYA-jZTyLk?" },
+    { name: "Império Carolíngio", file: "09 - Imperio-Carolingio.html", category: "Idade Média", videoUrl: "https://youtube.com/embed/7XhF7lzh2fQ?" },
+    { name: "Feudalismo", file: "10 - feudalismo.html", category: "Idade Média", videoUrl: "https://youtube.com/embed/HihjI7ceC6E?" },
+    { name: "Igreja na Idade Média", file: "11 - Igreja-na-Idade-Media.html", category: "Idade Média", videoUrl: "https://youtube.com/embed/83CBEL2hQCM?" },
+    { name: "Questão das Investiduras", file: "12 - Questao-das-Investiduras.html", category: "Idade Média", videoUrl: "https://www.youtube.com/embed/EUacQKGXQkc" },
+    { name: "As Cruzadas", file: "13 - as-cruzadas.html", category: "Idade Média", videoUrl: "https://youtube.com/embed/QW9PyBTbImY?" },
+    { name: "Renascimento Comercial Urbano", file: "14 - Renascimento-Comercial-Urbano.html", category: "Idade Média", videoUrl: "https://youtube.com/embed/kP7jFUwYc1g?" },
+    { name: "Baixa Idade Média", file: "15 - baixa -idade-média.html", category: "Idade Média", videoUrl: "https://youtube.com/embed/lKXqCqV0yGs?" },
+    { name: "Formação Monarquias Nacionais", file: "16 - Formacao-Monarquias-Nacionais.html", category: "Idade Moderna", videoUrl: "https://youtube.com/embed/cqZM7_UB6t4?" },
+    { name: "A Crise do Século XIV", file: "17 - Crise do Século XIV.html", category: "Idade Média", videoUrl: "https://www.youtube.com/embed/pdKNGXmgn24" },
+    { name: "Expansão Marítimo-Comercial", file: "18 - EXPANSÃO MARÍTIMO-COMERCIAL.html", category: "Idade Moderna", videoUrl: "https://youtube.com/embed/9SUD3BOLllE?" },
+    { name: "Reforma", file: "19 - Reformas.html", category: "Idade Moderna", videoUrl: "https://www.youtube.com/embed/S1Qavhhspgg" },
+    { name: "Mercantilismo", file: "20 - Mercantilismo.html", category: "Idade Moderna", videoUrl: "https://youtube.com/embed/F5sl0kfxzN4?" },
+    { name: "Absolutismo", file: "21 - Absolutismo.html", category: "Idade Moderna", videoUrl: "https://youtube.com/embed/5fSv6xw1_fE?" },
+    { name: "Revoluções Inglesas do Século XVII", file: "22 - REVOLUÇÕES INGLESAS DO SÉCULO XVII.html", category: "Idade Moderna", videoUrl: "https://www.youtube.com/embed/3HUGFC-3esw" },
+    { name: "Iluminismo e Despotismo Esclarecido", file: "23 - ILUMINISMO E DESPOTISMO ESCLARECIDO.html", category: "Idade Moderna", videoUrl: "https://www.youtube.com/embed/KQRIEGG-2oA" },
+    { name: "Montagem do Sistema Colonial", file: "24 - MONTAGEM DO SISTEMA COLONIAL.html", category: "Brasil Colonial", videoUrl: "https://youtube.com/embed/JJlob0qA1kY?" },
+    { name: "Montagem da Administração Colonial", file: "25 - Montagem-da-Administracao-Colonial.html", category: "Brasil Colonial", videoUrl: "https://youtube.com/embed/ZUfGYTOrLrw?" },
+    { name: "Sistema Colonial", file: "26 - Sistema-Colonial.html", category: "Brasil Colonial", videoUrl: "https://www.youtube.com/embed/IIReUDezw-E" },
+    { name: "A Crise do Sistema Colonial", file: "27 - A-Crise-do-Sistema-Colonial.html", category: "Brasil Colonial", videoUrl: "https://www.youtube.com/embed/x_QEuUqjuYY" },
+    { name: "Primeira Revolução Industrial", file: "28 - PRIMEIRA REVOLUÇÃO INDUSTRIAL.html", category: "Idade Contemporânea", videoUrl: "https://www.youtube.com/embed/4YK13SK5zzc" },
+    { name: "Independência dos Estados Unidos", file: "29 - Independencia-dos-Estados-Unidos.html", category: "América", videoUrl: "https://www.youtube.com/embed/rcN29xzIltA" },
+    { name: "Revolução Francesa", file: "30 - Revolucao-Francesa.html", category: "Idade Contemporânea", videoUrl: "https://www.youtube.com/embed/_46qYt8cETc" },
+    { name: "Era Napoleônica", file: "31 - Era-Napoleonica.html", category: "Idade Contemporânea", videoUrl: "https://www.youtube.com/embed/ibq9Clf_Kpk" },
+    { name: "Brasil Joanino", file: "32 - Brasil-Joanino.html", category: "Brasil Império", videoUrl: "https://www.youtube.com/embed/7ES7XZUflrQ" },
+    { name: "A Independência da América Espanhola", file: "33 - A Independência da América Espanhola.html", category: "América", videoUrl: "https://www.youtube.com/embed/uPWJWzpJvu4" },
+    { name: "Congresso de Viena", file: "34 - Congresso-de-Viena.html", category: "Século XIX", videoUrl: "https://www.youtube.com/embed/8-3Nit8lsKc" },
+    { name: "Processo de Independência", file: "35 - Processo-de-Independencia.html", category: "Brasil Império", videoUrl: "https://www.youtube.com/embed/lz5gvFmmPxE" },
+    { name: "Primeiro Reinado", file: "36 - Primeiro Reinado.html", category: "Brasil Império", videoUrl: "https://www.youtube.com/embed/X-V3Wiquu0M" },
+    { name: "Período Regencial", file: "37 - Período Regencial.html", category: "Brasil Império", videoUrl: "https://www.youtube.com/embed/dIDLmZd3wEU" },
+    { name: "Segundo Reinado", file: "38 - Segundo Reinado.html", category: "Brasil Império", videoUrl: "https://www.youtube.com/embed/xyXD-EIzX68" },
+    { name: "O Advento da República", file: "39 - O Advento da República.html", category: "Brasil República", videoUrl: "https://www.youtube.com/embed/T2gMKpADSQU" },
+    { name: "República Velha — Parte 1", file: "40 - República Velha - Parte 1.html", category: "Brasil República", videoUrl: "https://www.youtube.com/embed/q1knhnv_1pY" },
+    { name: "República Velha — Parte 2", file: "41 - República Velha - Parte 2.html", category: "Brasil República", videoUrl: "https://www.youtube.com/embed/zFQUZVhDg_I" },
+    { name: "Era Vargas", file: "42 - Era Vargas.html", category: "Brasil República", videoUrl: "https://www.youtube.com/embed/TiJBt5RrA-E" },
+    { name: "República Liberal Populista", file: "43 - República Liberal Populista.html", category: "Brasil República", videoUrl: "https://www.youtube.com/embed/G9ub4tL2HOM" },
+    { name: "Revoluções Liberais", file: "44 - Revoluções Liberais.html", category: "Século XIX", videoUrl: "https://www.youtube.com/embed/2989DknP4sw" },
+    { name: "Ocupação e Expansão Territoriais", file: "45 - OCUPAÇÃO E EXPANSÃO TERRITORIAIS.html", category: "Brasil Império", videoUrl: "https://www.youtube.com/embed/_fyQjzR6Sm0" },
+    { name: "A Guerra de Secessão", file: "46 - A Guerra de Secessão.html", category: "América", videoUrl: "https://www.youtube.com/embed/o_RaT6l4Heg" },
+    { name: "Unificações Alemã e Italiana", file: "47 - Unificações Alemã e Italiana.html", category: "Século XIX", videoUrl: "https://youtube.com/embed/R-qSg-nxvbY?" },
+    { name: "A Segunda Revolução Industrial, Neocolonismo", file: "48 - A Segunda Revolução Industrial, Neocolonialismo e Imperialismo.html", category: "Idade Contemporânea", videoUrl: "https://www.youtube.com/embed/tGsIuYPGl5s" },
+    { name: "A Primeira Guerra Mundial", file: "49 - A PRIMEIRA GUERRA MUNDIAL.html", category: "Século XX", videoUrl: "https://www.youtube.com/embed/ZfZAle8CVgg" },
+    { name: "Revolução Russa", file: "50 - REVOLUÇÃO RUSSA.html", category: "Século XX", videoUrl: "https://www.youtube.com/embed/XpxprM5lcm0" },
+    { name: "A Crise de 1929", file: "51 - A CRISE DE 1929.html", category: "Século XX", videoUrl: "https://www.youtube.com/embed/Hnw8qSCrBmE" },
+    { name: "O Nazi-Fascismo", file: "52 - O NAZI-FASCISMO.html", category: "Século XX", videoUrl: "https://www.youtube.com/embed/9XFK65d6xYI" },
+    { name: "Segunda Guerra Mundial", file: "53 - Segunda-Guerra-Mundial.html", category: "Século XX", videoUrl: "https://youtube.com/embed/ZffDTZTmLGI?" },
+    { name: "Descolonização", file: "54 - DESCOLONIZAÇÃO.html", category: "Século XX", videoUrl: "https://youtube.com/embed/ghOnbO0z3gA?" },
+    { name: "Guerra Fria", file: "55 - GUERRA FRIA.html", category: "Século XX", videoUrl: "https://youtube.com/embed/6QOkLu4kOOI?" }
 ];
         const grid = document.getElementById('topicsGrid');
         const searchInput = document.getElementById('searchInput');
@@ -367,7 +366,7 @@
     </script>
     <script>
   const paginaAnterior = "";
-  const paginaProxima = "Antiguidade oriental.html"; // Fim da sequência
+  const paginaProxima = "01 - Antiguidade oriental.html"; // Fim da sequência
 </script>
 <script src="navegacao.js"></script>
 </body>
