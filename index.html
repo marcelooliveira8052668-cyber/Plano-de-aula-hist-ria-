@@ -1,30 +1,28 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prof. Marcelo Oliveira - Portal de Estudos de História</title>
     <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
                         history: {
-                            dark: '#0f172a',
-                            card: '#1e293b',
-                            border: '#334155',
-                            gold: '#d97706',
-                            goldLight: '#f59e0b',
-                            accent: '#b45309'
+                            bg: '#05070c',
+                            card: '#0f172a',
+                            border: '#1e293b',
+                            gold: '#fbbf24',
+                            accent: '#d97706'
                         }
                     },
                     fontFamily: {
@@ -38,148 +36,129 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0b0f19;
-            color: #e2e8f0;
+            background-color: #05070c;
+            color: #f1f5f9;
         }
-
         .title-font {
             font-family: 'Cinzel', serif;
         }
-
         .custom-scrollbar::-webkit-scrollbar {
-            width: 8px;
+            width: 6px;
         }
-
         .custom-scrollbar::-webkit-scrollbar-track {
-            background: #0f172a;
+            background: #05070c;
         }
-
         .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #334155;
-            border-radius: 4px;
+            background: #1e293b;
+            border-radius: 3px;
         }
-
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-            background: #d97706;
+            background: #fbbf24;
+        }
+        .glow-effect {
+            box-shadow: 0 0 25px -5px rgba(251, 191, 36, 0.08);
         }
     </style>
 </head>
 
-<body class="min-h-screen flex flex-col custom-scrollbar">
+<body class="min-h-screen flex flex-col custom-scrollbar selection:bg-amber-400 selection:text-black">
 
-    <!-- Cabeçalho Principal -->
-    <header class="bg-history-dark/90 backdrop-blur-md border-b border-history-border sticky top-0 z-50">
-        <div
-            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+    <!-- Top Banner / Navbar Estilo Plataforma Premium -->
+    <header class="bg-history-bg/90 backdrop-blur-xl border-b border-history-border sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col sm:flex-row justify-between items-center gap-4">
             <div class="flex items-center space-x-3">
-                <div class="bg-amber-600/20 p-2.5 rounded-xl border border-amber-600/30 text-amber-500">
-                    <i class="fa-solid fa-landmark text-2xl"></i>
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-600 to-amber-400 flex items-center justify-center text-black font-bold shadow-lg shadow-amber-500/20">
+                    <i class="fa-solid fa-landmark text-lg"></i>
                 </div>
                 <div>
-                    <h1 class="title-font text-2xl font-bold tracking-wider text-white">Prof. Marcelo Oliveira <span
-                            class="text-amber-500 text-sm block tracking-widest font-inter font-light">ACADEMIA DE
-                            HISTÓRIA</span></h1>
+                    <h1 class="title-font text-lg sm:text-xl font-extrabold tracking-wider text-white">
+                        PROF. MARCELO OLIVEIRA
+                    </h1>
+                    <p class="text-amber-400 text-[10px] tracking-[0.2em] font-semibold uppercase">Portal Acadêmico de História</p>
                 </div>
             </div>
 
-            <!-- Barra de Pesquisa em Tempo Real -->
-            <div class="relative w-full md:w-96">
+            <!-- Pesquisa Moderna -->
+            <div class="relative w-full sm:w-80">
                 <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-slate-400">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-search text-xs"></i>
                 </span>
-                <input type="text" id="searchInput" placeholder="Pesquisar tema histórico..."
-                    class="w-full bg-history-card border border-history-border rounded-xl pl-10 pr-4 py-2.5 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all">
+                <input type="text" id="searchInput" placeholder="O que você deseja estudar hoje?"
+                    class="w-full bg-slate-900/80 border border-history-border rounded-full pl-10 pr-4 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-400/20 transition-all">
             </div>
         </div>
     </header>
 
-    <!-- Conteúdo Principal -->
+    <!-- Main Container -->
     <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
 
-        <!-- Banner de Boas-Vindas -->
-        <section
-            class="bg-gradient-to-r from-amber-950/40 via-slate-900 to-slate-900 border border-amber-500/20 rounded-2xl p-6 sm:p-8 mb-10 shadow-xl relative overflow-hidden">
-            <div class="absolute right-0 top-0 translate-x-8 -translate-y-8 text-amber-500/5 pointer-events-none">
-                <i class="fa-solid fa-scroll text-[220px]"></i>
+        <!-- Hero Section -->
+        <section class="relative bg-gradient-to-r from-slate-900 via-slate-900/90 to-amber-950/30 border border-history-border rounded-3xl p-6 sm:p-10 mb-10 overflow-hidden shadow-2xl glow-effect">
+            <div class="absolute -right-10 -bottom-10 text-amber-500/5 pointer-events-none">
+                <i class="fa-solid fa-book-bookmark text-[280px]"></i>
             </div>
             <div class="relative z-10 max-w-2xl">
-                <span
-                    class="bg-amber-500/10 text-amber-400 text-xs font-semibold px-3 py-1 rounded-full border border-amber-500/20 uppercase tracking-widest inline-block mb-3">Módulo
-                    de Estudos</span>
-                <h2 class="title-font text-3xl sm:text-4xl font-bold text-white mb-3">Sua Jornada Através dos Séculos
+                <span class="bg-amber-400/10 text-amber-400 text-[11px] font-bold px-3 py-1 rounded-full border border-amber-400/20 uppercase tracking-widest inline-flex items-center gap-1.5 mb-4">
+                    <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span> Sistema de Ensino Integrado
+                </span>
+                <h2 class="title-font text-3xl sm:text-4xl font-extrabold text-white mb-3 leading-tight">
+                    Domine a História com <span class="text-amber-400">Vídeos e Textos Exclusivos</span>
                 </h2>
-                <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
-                    Bem-vindo ao seu painel centralizado de estudos históricos. Selecione qualquer um dos temas abaixo
-                    para acessar o conteúdo detalhado, leituras e os vídeos explicativos dedicados.
+                <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">
+                    Visualize a capa das vídeo-aulas diretamente nos cards abaixo. Clique em qualquer miniatura para reproduzir o vídeo em tela cheia ou acesse o material de leitura dedicado.
                 </p>
-                <div class="flex flex-wrap gap-4 text-xs font-medium text-slate-400">
-                    <span
-                        class="flex items-center gap-1.5 bg-history-card px-3 py-1.5 rounded-lg border border-history-border"><i
-                            class="fa-solid fa-book-open text-amber-500"></i> Textos Prontos</span>
-                    <span
-                        class="flex items-center gap-1.5 bg-history-card px-3 py-1.5 rounded-lg border border-history-border"><i
-                            class="fa-solid fa-video text-amber-500"></i> Espaço para Vídeos</span>
-                    <span
-                        class="flex items-center gap-1.5 bg-history-card px-3 py-1.5 rounded-lg border border-history-border"><i
-                            class="fa-solid fa-compass text-amber-500"></i> Interativo</span>
+                <div class="flex items-center gap-4 text-xs font-semibold text-slate-300">
+                    <div class="flex items-center gap-2 bg-slate-900/60 px-3.5 py-2 rounded-xl border border-history-border">
+                        <i class="fa-solid fa-layer-group text-amber-400"></i>
+                        <span>Total de Temas: <strong id="counter" class="text-white">0</strong></span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Seção de Títulos e Grade -->
-        <div class="flex justify-between items-center mb-6">
-            <h3 class="title-font text-xl font-bold text-white flex items-center gap-2">
-                <i class="fa-solid fa-layer-group text-amber-500"></i> Temas Disponíveis (<span id="counter">0</span>)
-            </h3>
-        </div>
-
-        <!-- Grade de Temas Históricos -->
+        <!-- Grade de Conteúdos -->
         <div id="topicsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Os cards serão injetados e filtrados via JavaScript -->
+            <!-- Injetado Dinamicamente -->
         </div>
 
-        <!-- Mensagem de Nenhum Resultado -->
-        <div id="noResults" class="hidden text-center py-16">
-            <div class="text-slate-500 text-5xl mb-3"><i class="fa-solid fa-face-frown"></i></div>
-            <p class="text-slate-400 text-lg font-medium">Nenhum tema encontrado com esse termo.</p>
+        <!-- Alerta Sem Resultados -->
+        <div id="noResults" class="hidden text-center py-20">
+            <div class="text-slate-600 text-5xl mb-3"><i class="fa-solid fa-folder-open"></i></div>
+            <p class="text-slate-300 text-base font-medium">Nenhum conteúdo encontrado.</p>
         </div>
 
     </main>
 
-    <!-- Modal de Vídeo / Aula -->
-    <div id="videoModal"
-        class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-        <div
-            class="bg-history-card border border-history-border rounded-2xl w-full max-w-4xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh]">
-            <!-- Modal Header -->
-            <div class="px-6 py-4 border-b border-history-border flex justify-between items-center bg-history-dark">
+    <!-- Modal Estilo Cinema / EAD -->
+    <div id="videoModal" class="fixed inset-0 bg-black/90 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-history-border rounded-3xl w-full max-w-4xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh]">
+            <div class="px-6 py-4 border-b border-history-border flex justify-between items-center bg-slate-950">
                 <div class="flex items-center space-x-3">
-                    <div class="text-amber-500"><i class="fa-solid fa-play-circle text-xl"></i></div>
-                    <h4 id="modalTitle" class="title-font text-lg font-bold text-white">Título da Aula</h4>
+                    <div class="text-amber-400"><i class="fa-solid fa-play-circle text-lg"></i></div>
+                    <h4 id="modalTitle" class="title-font text-base sm:text-lg font-bold text-white">Carregando...</h4>
                 </div>
-                <button onclick="closeModal()" class="text-slate-400 hover:text-white transition-colors p-2">
-                    <i class="fa-solid fa-xmark text-xl"></i>
+                <button onclick="closeModal()" class="text-slate-400 hover:text-white p-2 rounded-xl hover:bg-slate-800 transition-colors">
+                    <i class="fa-solid fa-xmark text-lg"></i>
                 </button>
             </div>
-            <!-- Modal Body -->
+            
             <div class="p-6 overflow-y-auto custom-scrollbar space-y-6">
-                <!-- Espaço do Vídeo (Dinâmico) -->
-                <div id="videoWrapper" class="w-full aspect-video bg-slate-950 rounded-xl border border-history-border flex flex-col items-center justify-center relative overflow-hidden group">
-                    <!-- O vídeo ou aviso será inserido aqui via JavaScript -->
+                <!-- Wrapper do Vídeo -->
+                <div id="videoWrapper" class="w-full aspect-video bg-black rounded-2xl border border-history-border relative overflow-hidden shadow-2xl">
+                    <!-- Iframe injetado aqui -->
                 </div>
 
-                <!-- Ações e Links -->
-                <div
-                    class="flex flex-col sm:flex-row justify-between items-center gap-4 bg-history-dark p-4 rounded-xl border border-history-border">
-                    <div class="text-sm text-slate-300">
-                        <i class="fa-solid fa-circle-info text-amber-500 mr-1.5"></i> Arquivo HTML principal
-                        correspondente:
-                        <span id="modalFileBadge"
-                            class="font-mono text-xs bg-slate-800 text-amber-400 px-2 py-1 rounded ml-1">arquivo.html</span>
+                <!-- Barra de Acesso ao Texto -->
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-4 bg-slate-950 p-4 rounded-2xl border border-history-border">
+                    <div class="text-xs text-slate-300 flex items-center gap-2">
+                        <i class="fa-solid fa-file-lines text-amber-400 text-sm"></i>
+                        <span>Arquivo HTML de Leitura:</span>
+                        <span id="modalFileBadge" class="font-mono bg-slate-900 text-amber-300 px-2.5 py-1 rounded border border-slate-800 text-[11px]">...</span>
                     </div>
                     <a id="modalFileLink" href="#" target="_blank"
-                        class="w-full sm:w-auto bg-amber-600 hover:bg-amber-500 text-white font-medium px-5 py-2.5 rounded-xl transition-colors text-sm flex items-center justify-center gap-2 shadow-lg shadow-amber-600/20">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir Página HTML
+                        class="w-full sm:w-auto bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold px-5 py-2.5 rounded-xl transition-all text-xs flex items-center justify-center gap-2 shadow-lg shadow-amber-400/10">
+                        <span>Ler Texto Completo</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
                 </div>
             </div>
@@ -187,73 +166,82 @@
     </div>
 
     <!-- Rodapé -->
-    <footer class="bg-history-dark border-t border-history-border py-6 mt-12 text-center text-xs text-slate-400">
-        <p>Prof. Marcelo Oliveira - Portal Acadêmico de História &copy; 2026. Desenvolvido para estudos avançados.</p>
+    <footer class="bg-history-bg border-t border-history-border py-8 mt-16 text-center text-xs text-slate-500">
+        <p>Prof. Marcelo Oliveira - Portal Acadêmico de História &copy; 2026</p>
     </footer>
 
-    <!-- Script de Gestão dos Temas e Interatividade -->
+    <!-- Script Principal com Gerador de Miniaturas do YouTube -->
     <script>
-                        const topics = [
-    { name: "Antiguidade Oriental", file: "01 - Antiguidade oriental.html", level: "6º ano - Ensino Fundamental", category: "Antiguidade", videoUrl: "https://www.youtube.com/embed/PSMQHAvlIig" },
-    { name: "Egito", file: "02 - Egito.html", level: "6º ano - Ensino Fundamental", category: "Antiguidade", videoUrl: "https://www.youtube.com/embed/SIxnb-pQ7s4" },
-    { name: "Mesopotâmia", file: "03 - mesopotamia.html", level: "6º ano - Ensino Fundamental", category: "Antiguidade", videoUrl: "https://youtube.com/embed/qh7CKGQvTwY?" },
-    { name: "Fenícia", file: "04 - fenicia.html", level: "6º ano - Ensino Fundamental", category: "Antiguidade", videoUrl: "https://youtube.com/embed/Q80f0jDPQo8?" },
-    { name: "Grécia", file: "05 - grécia.html", level: "6º ano - Ensino Fundamental", category: "Antiguidade", videoUrl: "https://www.youtube.com/embed/qIvJPvfUQnU" },
-    { name: "Roma", file: "06 - Roma.html", level: "6º ano - Ensino Fundamental", category: "Antiguidade", videoUrl: "https://www.youtube.com/embed/Of2hobRWWV4" },
-    { name: "Império Bizantino", file: "07 - imperio-bizantino.html", level: "7º ano - Ensino Fundamental", category: "Idade Média", videoUrl: "https://youtube.com/embed/gcqT7DtSzEI?" },
-    { name: "Mundo Árabe", file: "08 - mundo-Arabe.html", level: "7º ano - Ensino Fundamental", category: "Idade Média", videoUrl: "https://youtube.com/embed/VkYA-jZTyLk?" },
-    { name: "Império Carolíngio", file: "09 - Imperio-Carolingio.html", level: "7º ano - Ensino Fundamental", category: "Idade Média", videoUrl: "https://youtube.com/embed/7XhF7lzh2fQ?" },
-    { name: "Feudalismo", file: "10 - feudalismo.html", level: "7º ano - Ensino Fundamental", category: "Idade Média", videoUrl: "https://youtube.com/embed/HihjI7ceC6E?" },
-    { name: "Igreja na Idade Média", file: "11 - Igreja-na-Idade-Media.html", level: "7º ano - Ensino Fundamental", category: "Idade Média", videoUrl: "https://youtube.com/embed/83CBEL2hQCM?" },
-    { name: "Questão das Investiduras", file: "12 - Questao-das-Investiduras.html", level: "7º ano - Ensino Fundamental", category: "Idade Média", videoUrl: "https://www.youtube.com/embed/EUacQKGXQkc" },
-    { name: "As Cruzadas", file: "13 - as-cruzadas.html", level: "7º ano - Ensino Fundamental", category: "Idade Média", videoUrl: "https://youtube.com/embed/QW9PyBTbImY?" },
-    { name: "Renascimento Comercial Urbano", file: "14 - Renascimento-Comercial-Urbano.html", level: "7º ano - Ensino Fundamental", category: "Idade Média", videoUrl: "https://youtube.com/embed/kP7jFUwYc1g?" },
-    { name: "Baixa Idade Média", file: "15 - baixa -idade-média.html", level: "7º ano - Ensino Fundamental", category: "Idade Média", videoUrl: "https://youtube.com/embed/lKXqCqV0yGs?" },
-    { name: "Formação Monarquias Nacionais", file: "16 - Formacao-Monarquias-Nacionais.html", level: "8º ano - Ensino Fundamental", category: "Idade Moderna", videoUrl: "https://youtube.com/embed/cqZM7_UB6t4?" },
-    { name: "A Crise do Século XIV", file: "17 - Crise do Século XIV.html", level: "8º ano - Ensino Fundamental", category: "Idade Média", videoUrl: "https://www.youtube.com/embed/pdKNGXmgn24" },
-    { name: "Expansão Marítimo-Comercial", file: "18 - EXPANSÃO MARÍTIMO-COMERCIAL.html", level: "8º ano - Ensino Fundamental", category: "Idade Moderna", videoUrl: "https://youtube.com/embed/9SUD3BOLllE?" },
-    { name: "Reforma", file: "19 - Reformas.html", level: "8º ano - Ensino Fundamental", category: "Idade Moderna", videoUrl: "https://www.youtube.com/embed/S1Qavhhspgg" },
-    { name: "Mercantilismo", file: "20 - Mercantilismo.html", level: "8º ano - Ensino Fundamental", category: "Idade Moderna", videoUrl: "https://youtube.com/embed/F5sl0kfxzN4?" },
-    { name: "Absolutismo", file: "21 - Absolutismo.html", level: "8º ano - Ensino Fundamental", category: "Idade Moderna", videoUrl: "https://youtube.com/embed/5fSv6xw1_fE?" },
-    { name: "Revoluções Inglesas do Século XVII", file: "22 - REVOLUÇÕES INGLESAS DO SÉCULO XVII.html", level: "8º ano - Ensino Fundamental", category: "Idade Moderna", videoUrl: "https://www.youtube.com/embed/3HUGFC-3esw" },
-    { name: "Iluminismo e Despotismo Esclarecido", file: "23 - ILUMINISMO E DESPOTISMO ESCLARECIDO.html", level: "8º ano - Ensino Fundamental", category: "Idade Moderna", videoUrl: "https://www.youtube.com/embed/KQRIEGG-2oA" },
-    { name: "Montagem do Sistema Colonial", file: "24 - MONTAGEM DO SISTEMA COLONIAL.html", level: "8º ano - Ensino Fundamental", category: "Brasil Colonial", videoUrl: "https://youtube.com/embed/JJlob0qA1kY?" },
-    { name: "Montagem da Administração Colonial", file: "25 - Montagem-da-Administracao-Colonial.html", level: "8º ano - Ensino Fundamental", category: "Brasil Colonial", videoUrl: "https://youtube.com/embed/ZUfGYTOrLrw?" },
-    { name: "Sistema Colonial", file: "26 - Sistema-Colonial.html", level: "8º ano - Ensino Fundamental", category: "Brasil Colonial", videoUrl: "https://www.youtube.com/embed/IIReUDezw-E" },
-    { name: "A Crise do Sistema Colonial", file: "27 - A-Crise-do-Sistema-Colonial.html", level: "8º ano - Ensino Fundamental", category: "Brasil Colonial", videoUrl: "https://www.youtube.com/embed/x_QEuUqjuYY" },
-    { name: "Primeira Revolução Industrial", file: "28 - PRIMEIRA REVOLUÇÃO INDUSTRIAL.html", level: "9º ano - Ensino Fundamental", category: "Idade Contemporânea", videoUrl: "https://www.youtube.com/embed/4YK13SK5zzc" },
-    { name: "Independência dos Estados Unidos", file: "29 - Independencia-dos-Estados-Unidos.html", level: "9º ano - Ensino Fundamental", category: "América", videoUrl: "https://www.youtube.com/embed/rcN29xzIltA" },
-    { name: "Revolução Francesa", file: "30 - Revolucao-Francesa.html", level: "9º ano - Ensino Fundamental", category: "Idade Contemporânea", videoUrl: "https://www.youtube.com/embed/_46qYt8cETc" },
-    { name: "Era Napoleônica", file: "31 - Era-Napoleonica.html", level: "9º ano - Ensino Fundamental", category: "Idade Contemporânea", videoUrl: "https://www.youtube.com/embed/ibq9Clf_Kpk" },
-    { name: "Brasil Joanino", file: "32 - Brasil-Joanino.html", level: "9º ano - Ensino Fundamental", category: "Brasil Império", videoUrl: "https://www.youtube.com/embed/7ES7XZUflrQ" },
-    { name: "A Independência da América Espanhola", file: "33 - A Independência da América Espanhola.html", level: "9º ano - Ensino Fundamental", category: "América", videoUrl: "https://www.youtube.com/embed/uPWJWzpJvu4" },
-    { name: "Congresso de Viena", file: "34 - Congresso-de-Viena.html", level: "9º ano - Ensino Fundamental", category: "Século XIX", videoUrl: "https://www.youtube.com/embed/8-3Nit8lsKc" },
-    { name: "Processo de Independência", file: "35 - Processo-de-Independencia.html", level: "9º ano - Ensino Fundamental", category: "Brasil Império", videoUrl: "https://www.youtube.com/embed/lz5gvFmmPxE" },
-    { name: "Primeiro Reinado", file: "36 - Primeiro Reinado.html", level: "9º ano - Ensino Fundamental", category: "Brasil Império", videoUrl: "https://www.youtube.com/embed/X-V3Wiquu0M" },
-    { name: "Período Regencial", file: "37 - Período Regencial.html", level: "9º ano - Ensino Fundamental", category: "Brasil Império", videoUrl: "https://www.youtube.com/embed/dIDLmZd3wEU" },
-    { name: "Segundo Reinado", file: "38 - Segundo Reinado.html", level: "9º ano - Ensino Fundamental", category: "Brasil Império", videoUrl: "https://www.youtube.com/embed/xyXD-EIzX68" },
-    { name: "O Advento da República", file: "39 - O Advento da República.html", level: "9º ano - Ensino Fundamental", category: "Brasil República", videoUrl: "https://www.youtube.com/embed/T2gMKpADSQU" },
-    { name: "República Velha — Parte 1", file: "40 - República Velha - Parte 1.html", level: "9º ano - Ensino Fundamental", category: "Brasil República", videoUrl: "https://www.youtube.com/embed/q1knhnv_1pY" },
-    { name: "República Velha — Parte 2", file: "41 - República Velha - Parte 2.html", level: "9º ano - Ensino Fundamental", category: "Brasil República", videoUrl: "https://www.youtube.com/embed/zFQUZVhDg_I" },
-    { name: "Era Vargas", file: "42 - Era Vargas.html", level: "9º ano - Ensino Fundamental", category: "Brasil República", videoUrl: "https://www.youtube.com/embed/TiJBt5RrA-E" },
-    { name: "República Liberal Populista", file: "43 - República Liberal Populista.html", level: "9º ano - Ensino Fundamental", category: "Brasil República", videoUrl: "https://www.youtube.com/embed/G9ub4tL2HOM" },
-    { name: "Revoluções Liberais", file: "44 - Revoluções Liberais.html", level: "9º ano - Ensino Fundamental", category: "Século XIX", videoUrl: "https://www.youtube.com/embed/2989DknP4sw" },
-    { name: "Ocupação e Expansão Territoriais", file: "45 - OCUPAÇÃO E EXPANSÃO TERRITORIAIS.html", level: "9º ano - Ensino Fundamental", category: "Brasil Império", videoUrl: "https://www.youtube.com/embed/_fyQjzR6Sm0" },
-    { name: "A Guerra de Secessão", file: "46 - A Guerra de Secessão.html", level: "9º ano - Ensino Fundamental", category: "América", videoUrl: "https://www.youtube.com/embed/o_RaT6l4Heg" },
-    { name: "Unificações Alemã e Italiana", file: "47 - Unificações Alemã e Italiana.html", level: "9º ano - Ensino Fundamental", category: "Século XIX", videoUrl: "https://youtube.com/embed/R-qSg-nxvbY?" },
-    { name: "A Segunda Revolução Industrial, Neocolonismo", file: "48 - A Segunda Revolução Industrial, Neocolonialismo e Imperialismo.html", level: "9º ano - Ensino Fundamental", category: "Idade Contemporânea", videoUrl: "https://www.youtube.com/embed/tGsIuYPGl5s" },
-    { name: "A Primeira Guerra Mundial", file: "49 - A PRIMEIRA GUERRA MUNDIAL.html", level: "1º ano - Ensino Médio", category: "Século XX", videoUrl: "https://www.youtube.com/embed/ZfZAle8CVgg" },
-    { name: "Revolução Russa", file: "50 - REVOLUÇÃO RUSSA.html", level: "1º ano - Ensino Médio", category: "Século XX", videoUrl: "https://www.youtube.com/embed/XpxprM5lcm0" },
-    { name: "A Crise de 1929", file: "51 - A CRISE DE 1929.html", level: "1º ano - Ensino Médio", category: "Século XX", videoUrl: "https://www.youtube.com/embed/Hnw8qSCrBmE" },
-    { name: "O Nazi-Fascismo", file: "52 - O NAZI-FASCISMO.html", level: "1º ano - Ensino Médio", category: "Século XX", videoUrl: "https://www.youtube.com/embed/9XFK65d6xYI" },
-    { name: "Segunda Guerra Mundial", file: "53 - Segunda-Guerra-Mundial.html", level: "1º ano - Ensino Médio", category: "Século XX", videoUrl: "https://youtube.com/embed/ZffDTZTmLGI?" },
-    { name: "Descolonização", file: "54 - DESCOLONIZAÇÃO.html", level: "2º ano - Ensino Médio", category: "Século XX", videoUrl: "https://youtube.com/embed/ghOnbO0z3gA?" },
-    { name: "Guerra Fria", file: "55 - GUERRA FRIA.html", level: "2º ano - Ensino Médio", category: "Século XX", videoUrl: "https://youtube.com/embed/6QOkLu4kOOI?" },
-    { name: "A Ditadura Militar (1964-1985)", file: "56 - Ditadura Militar (1964-1985).html", level: "3º ano - Ensino Médio", category: "Brasil República", videoUrl: "https://www.youtube.com/embed/0A8fvJKzhcc" },
-    { name: "Redemocratização e Constituição de 1988", file: "57 - Redemocratização e Constituição de 1988.html", level: "3º ano - Ensino Médio", category: "Brasil República", videoUrl: "https://www.youtube.com/embed/VumP6viTVpQ" },
-    { name: "Nova República e Desafios Contemporâneos", file: "58 - Nova República e Desafios Contemporâneos.html", level: "3º ano - Ensino Médio", category: "Brasil República", videoUrl: "https://www.youtube.com/embed/AmJOlgU0E-k" },
-    { name: "Presidentes do Brasil", file: "59 - Presidentes do Brasil.html", level: "3º ano - Ensino Médio", category: "Extras", videoUrl: "https://www.youtube.com/embed/q7E4XrfGGnE" }
-];
+        const topics = [
+            { name: "Antiguidade Oriental", file: "01 - Antiguidade oriental.html", level: "6º ano - Ensino Fundamental", category: "Antiguidade", videoUrl: "https://www.youtube.com/embed/PSMQHAvlIig" },
+            { name: "Egito", file: "02 - Egito.html", level: "6º ano - Ensino Fundamental", category: "Antiguidade", videoUrl: "https://www.youtube.com/embed/SIxnb-pQ7s4" },
+            { name: "Mesopotâmia", file: "03 - mesopotamia.html", level: "6º ano - Ensino Fundamental", category: "Antiguidade", videoUrl: "https://youtube.com/embed/qh7CKGQvTwY?" },
+            { name: "Fenícia", file: "04 - fenicia.html", level: "6º ano - Ensino Fundamental", category: "Antiguidade", videoUrl: "https://youtube.com/embed/Q80f0jDPQo8?" },
+            { name: "Grécia", file: "05 - grécia.html", level: "6º ano - Ensino Fundamental", category: "Antiguidade", videoUrl: "https://www.youtube.com/embed/qIvJPvfUQnU" },
+            { name: "Roma", file: "06 - Roma.html", level: "6º ano - Ensino Fundamental", category: "Antiguidade", videoUrl: "https://www.youtube.com/embed/Of2hobRWWV4" },
+            { name: "Império Bizantino", file: "07 - imperio-bizantino.html", level: "7º ano - Ensino Fundamental", category: "Idade Média", videoUrl: "https://youtube.com/embed/gcqT7DtSzEI?" },
+            { name: "Mundo Árabe", file: "08 - mundo-Arabe.html", level: "7º ano - Ensino Fundamental", category: "Idade Média", videoUrl: "https://youtube.com/embed/VkYA-jZTyLk?" },
+            { name: "Império Carolíngio", file: "09 - Imperio-Carolingio.html", level: "7º ano - Ensino Fundamental", category: "Idade Média", videoUrl: "https://youtube.com/embed/7XhF7lzh2fQ?" },
+            { name: "Feudalismo", file: "10 - feudalismo.html", level: "7º ano - Ensino Fundamental", category: "Idade Média", videoUrl: "https://youtube.com/embed/HihjI7ceC6E?" },
+            { name: "Igreja na Idade Média", file: "11 - Igreja-na-Idade-Media.html", level: "7º ano - Ensino Fundamental", category: "Idade Média", videoUrl: "https://youtube.com/embed/83CBEL2hQCM?" },
+            { name: "Questão das Investiduras", file: "12 - Questao-das-Investiduras.html", level: "7º ano - Ensino Fundamental", category: "Idade Média", videoUrl: "https://www.youtube.com/embed/EUacQKGXQkc" },
+            { name: "As Cruzadas", file: "13 - as-cruzadas.html", level: "7º ano - Ensino Fundamental", category: "Idade Média", videoUrl: "https://youtube.com/embed/QW9PyBTbImY?" },
+            { name: "Renascimento Comercial Urbano", file: "14 - Renascimento-Comercial-Urbano.html", level: "7º ano - Ensino Fundamental", category: "Idade Média", videoUrl: "https://youtube.com/embed/kP7jFUwYc1g?" },
+            { name: "Baixa Idade Média", file: "15 - baixa -idade-média.html", level: "7º ano - Ensino Fundamental", category: "Idade Média", videoUrl: "https://youtube.com/embed/lKXqCqV0yGs?" },
+            { name: "Formação Monarquias Nacionais", file: "16 - Formacao-Monarquias-Nacionais.html", level: "8º ano - Ensino Fundamental", category: "Idade Moderna", videoUrl: "https://youtube.com/embed/cqZM7_UB6t4?" },
+            { name: "A Crise do Século XIV", file: "17 - Crise do Século XIV.html", level: "8º ano - Ensino Fundamental", category: "Idade Média", videoUrl: "https://www.youtube.com/embed/pdKNGXmgn24" },
+            { name: "Expansão Marítimo-Comercial", file: "18 - EXPANSÃO MARÍTIMO-COMERCIAL.html", level: "8º ano - Ensino Fundamental", category: "Idade Moderna", videoUrl: "https://youtube.com/embed/9SUD3BOLllE?" },
+            { name: "Reforma", file: "19 - Reformas.html", level: "8º ano - Ensino Fundamental", category: "Idade Moderna", videoUrl: "https://www.youtube.com/embed/S1Qavhhspgg" },
+            { name: "Mercantilismo", file: "20 - Mercantilismo.html", level: "8º ano - Ensino Fundamental", category: "Idade Moderna", videoUrl: "https://youtube.com/embed/F5sl0kfxzN4?" },
+            { name: "Absolutismo", file: "21 - Absolutismo.html", level: "8º ano - Ensino Fundamental", category: "Idade Moderna", videoUrl: "https://youtube.com/embed/5fSv6xw1_fE?" },
+            { name: "Revoluções Inglesas do Século XVII", file: "22 - REVOLUÇÕES INGLESAS DO SÉCULO XVII.html", level: "8º ano - Ensino Fundamental", category: "Idade Moderna", videoUrl: "https://www.youtube.com/embed/3HUGFC-3esw" },
+            { name: "Iluminismo e Despotismo Esclarecido", file: "23 - ILUMINISMO E DESPOTISMO ESCLARECIDO.html", level: "8º ano - Ensino Fundamental", category: "Idade Moderna", videoUrl: "https://www.youtube.com/embed/KQRIEGG-2oA" },
+            { name: "Montagem do Sistema Colonial", file: "24 - MONTAGEM DO SISTEMA COLONIAL.html", level: "8º ano - Ensino Fundamental", category: "Brasil Colonial", videoUrl: "https://youtube.com/embed/JJlob0qA1kY?" },
+            { name: "Montagem da Administração Colonial", file: "25 - Montagem-da-Administracao-Colonial.html", level: "8º ano - Ensino Fundamental", category: "Brasil Colonial", videoUrl: "https://youtube.com/embed/ZUfGYTOrLrw?" },
+            { name: "Sistema Colonial", file: "26 - Sistema-Colonial.html", level: "8º ano - Ensino Fundamental", category: "Brasil Colonial", videoUrl: "https://www.youtube.com/embed/IIReUDezw-E" },
+            { name: "A Crise do Sistema Colonial", file: "27 - A-Crise-do-Sistema-Colonial.html", level: "8º ano - Ensino Fundamental", category: "Brasil Colonial", videoUrl: "https://www.youtube.com/embed/x_QEuUqjuYY" },
+            { name: "Primeira Revolução Industrial", file: "28 - PRIMEIRA REVOLUÇÃO INDUSTRIAL.html", level: "9º ano - Ensino Fundamental", category: "Idade Contemporânea", videoUrl: "https://www.youtube.com/embed/4YK13SK5zzc" },
+            { name: "Independência dos Estados Unidos", file: "29 - Independencia-dos-Estados-Unidos.html", level: "9º ano - Ensino Fundamental", category: "América", videoUrl: "https://www.youtube.com/embed/rcN29xzIltA" },
+            { name: "Revolução Francesa", file: "30 - Revolucao-Francesa.html", level: "9º ano - Ensino Fundamental", category: "Idade Contemporânea", videoUrl: "https://www.youtube.com/embed/_46qYt8cETc" },
+            { name: "Era Napoleônica", file: "31 - Era-Napoleonica.html", level: "9º ano - Ensino Fundamental", category: "Idade Contemporânea", videoUrl: "https://www.youtube.com/embed/ibq9Clf_Kpk" },
+            { name: "Brasil Joanino", file: "32 - Brasil-Joanino.html", level: "9º ano - Ensino Fundamental", category: "Brasil Império", videoUrl: "https://www.youtube.com/embed/7ES7XZUflrQ" },
+            { name: "A Independência da América Espanhola", file: "33 - A Independência da América Espanhola.html", level: "9º ano - Ensino Fundamental", category: "América", videoUrl: "https://www.youtube.com/embed/uPWJWzpJvu4" },
+            { name: "Congresso de Viena", file: "34 - Congresso-de-Viena.html", level: "9º ano - Ensino Fundamental", category: "Século XIX", videoUrl: "https://www.youtube.com/embed/8-3Nit8lsKc" },
+            { name: "Processo de Independência", file: "35 - Processo-de-Independencia.html", level: "9º ano - Ensino Fundamental", category: "Brasil Império", videoUrl: "https://www.youtube.com/embed/lz5gvFmmPxE" },
+            { name: "Primeiro Reinado", file: "36 - Primeiro Reinado.html", level: "9º ano - Ensino Fundamental", category: "Brasil Império", videoUrl: "https://www.youtube.com/embed/X-V3Wiquu0M" },
+            { name: "Período Regencial", file: "37 - Período Regencial.html", level: "9º ano - Ensino Fundamental", category: "Brasil Império", videoUrl: "https://www.youtube.com/embed/dIDLmZd3wEU" },
+            { name: "Segundo Reinado", file: "38 - Segundo Reinado.html", level: "9º ano - Ensino Fundamental", category: "Brasil Império", videoUrl: "https://www.youtube.com/embed/xyXD-EIzX68" },
+            { name: "O Advento da República", file: "39 - O Advento da República.html", level: "9º ano - Ensino Fundamental", category: "Brasil República", videoUrl: "https://www.youtube.com/embed/T2gMKpADSQU" },
+            { name: "República Velha — Parte 1", file: "40 - República Velha - Parte 1.html", level: "9º ano - Ensino Fundamental", category: "Brasil República", videoUrl: "https://www.youtube.com/embed/q1knhnv_1pY" },
+            { name: "República Velha — Parte 2", file: "41 - República Velha - Parte 2.html", level: "9º ano - Ensino Fundamental", category: "Brasil República", videoUrl: "https://www.youtube.com/embed/zFQUZVhDg_I" },
+            { name: "Era Vargas", file: "42 - Era Vargas.html", level: "9º ano - Ensino Fundamental", category: "Brasil República", videoUrl: "https://www.youtube.com/embed/TiJBt5RrA-E" },
+            { name: "República Liberal Populista", file: "43 - República Liberal Populista.html", level: "9º ano - Ensino Fundamental", category: "Brasil República", videoUrl: "https://www.youtube.com/embed/G9ub4tL2HOM" },
+            { name: "Revoluções Liberais", file: "44 - Revoluções Liberais.html", level: "9º ano - Ensino Fundamental", category: "Século XIX", videoUrl: "https://www.youtube.com/embed/2989DknP4sw" },
+            { name: "Ocupação e Expansão Territoriais", file: "45 - OCUPAÇÃO E EXPANSÃO TERRITORIAIS.html", level: "9º ano - Ensino Fundamental", category: "Brasil Império", videoUrl: "https://www.youtube.com/embed/_fyQjzR6Sm0" },
+            { name: "A Guerra de Secessão", file: "46 - A Guerra de Secessão.html", level: "9º ano - Ensino Fundamental", category: "América", videoUrl: "https://www.youtube.com/embed/o_RaT6l4Heg" },
+            { name: "Unificações Alemã e Italiana", file: "47 - Unificações Alemã e Italiana.html", level: "9º ano - Ensino Fundamental", category: "Século XIX", videoUrl: "https://youtube.com/embed/R-qSg-nxvbY?" },
+            { name: "A Segunda Revolução Industrial, Neocolonismo", file: "48 - A Segunda Revolução Industrial, Neocolonialismo e Imperialismo.html", level: "9º ano - Ensino Fundamental", category: "Idade Contemporânea", videoUrl: "https://www.youtube.com/embed/tGsIuYPGl5s" },
+            { name: "A Primeira Guerra Mundial", file: "49 - A PRIMEIRA GUERRA MUNDIAL.html", level: "1º ano - Ensino Médio", category: "Século XX", videoUrl: "https://www.youtube.com/embed/ZfZAle8CVgg" },
+            { name: "Revolução Russa", file: "50 - REVOLUÇÃO RUSSA.html", level: "1º ano - Ensino Médio", category: "Século XX", videoUrl: "https://www.youtube.com/embed/XpxprM5lcm0" },
+            { name: "A Crise de 1929", file: "51 - A CRISE DE 1929.html", level: "1º ano - Ensino Médio", category: "Século XX", videoUrl: "https://www.youtube.com/embed/Hnw8qSCrBmE" },
+            { name: "O Nazi-Fascismo", file: "52 - O NAZI-FASCISMO.html", level: "1º ano - Ensino Médio", category: "Século XX", videoUrl: "https://www.youtube.com/embed/9XFK65d6xYI" },
+            { name: "Segunda Guerra Mundial", file: "53 - Segunda-Guerra-Mundial.html", level: "1º ano - Ensino Médio", category: "Século XX", videoUrl: "https://youtube.com/embed/ZffDTZTmLGI?" },
+            { name: "Descolonização", file: "54 - DESCOLONIZAÇÃO.html", level: "2º ano - Ensino Médio", category: "Século XX", videoUrl: "https://youtube.com/embed/ghOnbO0z3gA?" },
+            { name: "Guerra Fria", file: "55 - GUERRA FRIA.html", level: "2º ano - Ensino Médio", category: "Século XX", videoUrl: "https://youtube.com/embed/6QOkLu4kOOI?" },
+            { name: "A Ditadura Militar (1964-1985)", file: "56 - Ditadura Militar (1964-1985).html", level: "3º ano - Ensino Médio", category: "Brasil República", videoUrl: "https://www.youtube.com/embed/0A8fvJKzhcc" },
+            { name: "Redemocratização e Constituição de 1988", file: "57 - Redemocratização e Constituição de 1988.html", level: "3º ano - Ensino Médio", category: "Brasil República", videoUrl: "https://www.youtube.com/embed/VumP6viTVpQ" },
+            { name: "Nova República e Desafios Contemporâneos", file: "58 - Nova República e Desafios Contemporâneos.html", level: "3º ano - Ensino Médio", category: "Brasil República", videoUrl: "https://www.youtube.com/embed/AmJOlgU0E-k" },
+            { name: "Presidentes do Brasil", file: "59 - Presidentes do Brasil.html", level: "3º ano - Ensino Médio", category: "Extras", videoUrl: "https://youtube.com/embed/04hkWmQ1PIM?" }
+        ];
+
+        // Função para extrair o ID do vídeo do YouTube de qualquer formato de URL
+        function getYouTubeId(url) {
+            if (!url) return null;
+            const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+            const match = url.match(regExp);
+            return (match && match[2].length === 11) ? match[2] : null;
+        }
+
         const grid = document.getElementById('topicsGrid');
         const searchInput = document.getElementById('searchInput');
         const counter = document.getElementById('counter');
@@ -289,35 +277,62 @@
 
             order.forEach(function(lv) {
                 if (!groups[lv]) return;
-                var header = document.createElement('h3');
-                header.className = "col-span-full text-xl font-bold text-amber-500 mt-8 mb-4 title-font border-b border-history-border pb-2";
-                header.textContent = lv;
+                
+                // Cabeçalho da série escolar
+                var header = document.createElement('div');
+                header.className = "col-span-full flex items-center gap-3 mt-10 mb-4 pb-2 border-b border-history-border";
+                header.innerHTML = `
+                    <div class="w-8 h-8 rounded-lg bg-amber-400/10 text-amber-400 flex items-center justify-center font-bold text-xs border border-amber-400/20">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-amber-400 title-font tracking-wide">${lv}</h3>
+                `;
                 grid.appendChild(header);
+
                 groups[lv].forEach(function(topic, index) {
+                    const videoId = getYouTubeId(topic.videoUrl);
+                    // Pega a imagem de alta resolução oficial do YouTube direto pelo ID
+                    const thumbnailUrl = videoId ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg` : 'https://via.placeholder.com/480x360?text=Sem+Imagem';
+
                     var card = document.createElement('div');
-                    card.className = "bg-history-card border border-history-border rounded-2xl p-6 flex flex-col justify-between hover:border-amber-500/50 hover:shadow-xl hover:shadow-amber-500/5 transition-all duration-300 group";
+                    card.className = "bg-history-card border border-history-border rounded-2xl overflow-hidden flex flex-col justify-between hover:border-amber-400/40 hover:shadow-xl transition-all duration-300 group";
                     card.innerHTML = `
                         <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="text-xs font-semibold px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-400 border border-amber-500/20">
-                                    ${topic.category}
-                                </span>
-                                <span class="text-xs font-mono text-slate-500">#${index + 1}</span>
+                            <!-- Miniatura do Vídeo do YouTube -->
+                            <div class="relative w-full aspect-video bg-slate-950 overflow-hidden cursor-pointer" onclick="openModal('${topic.name.replace(/'/g, "\\'")}', '${topic.file}', '${topic.videoUrl}')">
+                                <img src="${thumbnailUrl}" alt="${topic.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-12 h-12 rounded-full bg-amber-400/90 text-slate-950 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                        <i class="fa-solid fa-play ml-0.5 text-sm"></i>
+                                    </div>
+                                </div>
+                                <div class="absolute top-2 left-2">
+                                    <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-950/80 text-amber-400 border border-amber-400/20 backdrop-blur-sm uppercase">
+                                        ${topic.category}
+                                    </span>
+                                </div>
                             </div>
-                            <h4 class="title-font text-lg font-bold text-white group-hover:text-amber-400 transition-colors mb-2">
-                                ${topic.name}
-                            </h4>
-                            <p class="text-xs text-slate-400 mb-6 flex items-center gap-1.5 font-mono">
-                                <i class="fa-solid fa-code text-slate-500"></i> ${topic.file}
-                            </p>
+
+                            <!-- Informações do Tema -->
+                            <div class="p-5">
+                                <h4 class="title-font text-base font-bold text-white group-hover:text-amber-400 transition-colors mb-2 leading-snug">
+                                    ${topic.name}
+                                </h4>
+                                <p class="text-xs text-slate-400 mb-4 flex items-center gap-2 font-mono">
+                                    <i class="fa-solid fa-code text-slate-600 text-xs"></i> ${topic.file}
+                                </p>
+                            </div>
                         </div>
-                        <div class="pt-4 border-t border-history-border flex items-center justify-between gap-3">
+
+                        <!-- Rodapé do Card com os Botões -->
+                        <div class="px-5 pb-5 pt-0 flex items-center gap-2">
                             <button onclick="openModal('${topic.name.replace(/'/g, "\\'")}', '${topic.file}', '${topic.videoUrl}')" 
-                                class="flex-1 bg-amber-600/10 hover:bg-amber-600 text-amber-400 hover:text-white border border-amber-600/30 hover:border-transparent text-xs font-semibold py-2.5 px-3 rounded-xl transition-all flex items-center justify-center gap-2">
-                                <i class="fa-solid fa-play"></i> Assistir Vídeo / Aula
+                                class="flex-1 bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-xs py-2.5 px-3 rounded-xl transition-all flex items-center justify-center gap-2 shadow-md shadow-amber-400/10">
+                                <i class="fa-solid fa-play text-[10px]"></i> Assistir Vídeo
                             </button>
                             <a href="${topic.file}" target="_blank" 
-                                class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs py-2.5 px-3 rounded-xl transition-colors border border-history-border flex items-center justify-center" title="Abrir Arquivo HTML">
+                                class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white text-xs py-2.5 px-3 rounded-xl transition-colors border border-history-border flex items-center justify-center" title="Abrir Texto em Página HTML">
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </a>
                         </div>
@@ -327,7 +342,6 @@
             });
         }
 
-        // Funções do Modal com carregamento dinâmico de vídeo
         function openModal(title, fileName, videoUrl) {
             document.getElementById('modalTitle').textContent = title;
             document.getElementById('modalFileBadge').textContent = fileName;
@@ -336,7 +350,6 @@
             const videoWrapper = document.getElementById('videoWrapper');
             
             if (videoUrl && videoUrl.trim() !== "") {
-                // Se o tema tem um link de vídeo cadastrado, exibe o Iframe
                 videoWrapper.innerHTML = `
                     <iframe class="absolute inset-0 w-full h-full" 
                         src="${videoUrl}" 
@@ -344,17 +357,15 @@
                         frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                         allowfullscreen>
-                    ></iframe>
+                    </iframe>
                 `;
             } else {
-                // Se estiver vazio, exibe o aviso padrão para aquele tema
                 videoWrapper.innerHTML = `
                     <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-                        <div class="w-16 h-16 rounded-full bg-amber-600/20 border border-amber-600/40 text-amber-500 flex items-center justify-center text-2xl mb-3 group-hover:scale-110 transition-transform">
+                        <div class="w-12 h-12 rounded-full bg-amber-400/10 text-amber-400 flex items-center justify-center text-xl mb-2">
                             <i class="fa-solid fa-video-slash"></i>
                         </div>
-                        <h5 class="text-white font-semibold text-lg mb-1">Vídeo ainda não inserido</h5>
-                        <p class="text-slate-400 text-xs max-w-md">Cole o link do YouTube na propriedade videoUrl deste tema no código JavaScript.</p>
+                        <h5 class="text-white font-semibold text-sm">Vídeo indisponível</h5>
                     </div>
                 `;
             }
@@ -366,36 +377,28 @@
         function closeModal() {
             document.getElementById('videoModal').classList.add('hidden');
             document.body.style.overflow = 'auto';
-            // Limpa o vídeo ao fechar para parar o som/reprodução
             document.getElementById('videoWrapper').innerHTML = '';
         }
 
-        // Fechar modal clicando fora
         document.getElementById('videoModal').addEventListener('click', (e) => {
             if (e.target === document.getElementById('videoModal')) {
                 closeModal();
             }
         });
 
-        // Evento de Pesquisa
         searchInput.addEventListener('input', (e) => {
             const query = e.target.value.toLowerCase();
             const filtered = topics.filter(t =>
                 t.name.toLowerCase().includes(query) ||
                 t.category.toLowerCase().includes(query) ||
-                t.file.toLowerCase().includes(query)
+                t.file.toLowerCase().includes(query) ||
+                t.level.toLowerCase().includes(query)
             );
             renderTopics(filtered);
         });
 
-        // Inicialização
         renderTopics(topics);
     </script>
-    <script>
-  const paginaAnterior = "";
-  const paginaProxima = "01 - Antiguidade oriental.html"; // Fim da sequência
-</script>
-<script src="navegacao.js"></script>
 </body>
 
 </html>
